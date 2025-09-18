@@ -1,0 +1,576 @@
+[
+  {
+    "name": "Bruschetta",
+    "description": "Toasted bread topped with juicy tomatoes, garlic, Parmesan cheese, fresh basil, and balsamic vinegar.",
+    "type": "appetizer"
+  },
+  {
+    "name": "Garlic Bread",
+    "description": "Toasted bread with garlic butter and herbs.",
+    "type": "appetizer"
+  },
+  {
+    "name": "Caprese Salad",
+    "description": "Fresh tomatoes, mozzarella, basil, and olive oil.",
+    "type": "appetizer"
+  },
+  {
+    "name": "Stuffed Mushrooms",
+    "description": "Mushrooms filled with cheese and herbs.",
+    "type": "appetizer"
+  },
+  {
+    "name": "Calamari",
+    "description": "Fried squid rings with marinara sauce.",
+    "type": "appetizer"
+  },
+  {
+    "name": "Mozzarella Sticks",
+    "description": "Breaded and fried mozzarella with marinara dip.",
+    "type": "appetizer"
+  },
+  {
+    "name": "Shrimp Cocktail",
+    "description": "Chilled shrimp with tangy cocktail sauce.",
+    "type": "appetizer"
+  },
+  {
+    "name": "Spring Rolls",
+    "description": "Crispy rolls filled with vegetables and served with sweet chili sauce.",
+    "type": "appetizer"
+  },
+  {
+    "name": "Hummus Platter",
+    "description": "Creamy hummus with pita bread, olives, and veggies.",
+    "type": "appetizer"
+  },
+  {
+    "name": "Nachos",
+    "description": "Tortilla chips with melted cheese, jalapeños, and salsa.",
+    "type": "appetizer"
+  },
+  {
+    "name": "Chicken Wings",
+    "description": "Spicy buffalo wings with blue cheese dip.",
+    "type": "appetizer"
+  },
+  {
+    "name": "Onion Rings",
+    "description": "Crispy fried onion rings with ranch dip.",
+    "type": "appetizer"
+  },
+  {
+    "name": "Margherita Pizza",
+    "description": "Classic pizza with fresh mozzarella, tomatoes, and basil on a thin crust.",
+    "type": "pizza"
+  },
+  {
+    "name": "Pepperoni Pizza",
+    "description": "Pizza with pepperoni, mozzarella, and tomato sauce.",
+    "type": "pizza"
+  },
+  {
+    "name": "BBQ Chicken Pizza",
+    "description": "Pizza with BBQ sauce, chicken, red onions, and cilantro.",
+    "type": "pizza"
+  },
+  {
+    "name": "Veggie Pizza",
+    "description": "Pizza with bell peppers, mushrooms, onions, and olives.",
+    "type": "pizza"
+  },
+  {
+    "name": "Four Cheese Pizza",
+    "description": "Pizza with mozzarella, Parmesan, gorgonzola, and ricotta.",
+    "type": "pizza"
+  },
+  {
+    "name": "Hawaiian Pizza",
+    "description": "Pizza with ham, pineapple, and mozzarella.",
+    "type": "pizza"
+  },
+  {
+    "name": "Meat Lovers Pizza",
+    "description": "Pizza with sausage, pepperoni, ham, and bacon.",
+    "type": "pizza"
+  },
+  {
+    "name": "Mushroom Truffle Pizza",
+    "description": "Pizza with mushrooms, truffle oil, and mozzarella.",
+    "type": "pizza"
+  },
+  {
+    "name": "Pasta Carbonara",
+    "description": "Spaghetti with creamy egg-based sauce, pancetta, and Parmesan cheese.",
+    "type": "pasta"
+  },
+  {
+    "name": "Fettuccine Alfredo",
+    "description": "Fettuccine with creamy Parmesan sauce.",
+    "type": "pasta"
+  },
+  {
+    "name": "Spaghetti Bolognese",
+    "description": "Spaghetti with meat sauce and herbs.",
+    "type": "pasta"
+  },
+  {
+    "name": "Penne Arrabbiata",
+    "description": "Penne with spicy tomato sauce and chili flakes.",
+    "type": "pasta"
+  },
+  {
+    "name": "Lasagna",
+    "description": "Layered pasta with meat, cheese, and tomato sauce.",
+    "type": "pasta"
+  },
+  {
+    "name": "Ravioli",
+    "description": "Cheese-filled ravioli with marinara sauce.",
+    "type": "pasta"
+  },
+  {
+    "name": "Pesto Pasta",
+    "description": "Linguine with basil pesto and pine nuts.",
+    "type": "pasta"
+  },
+  {
+    "name": "Shrimp Scampi",
+    "description": "Linguine with shrimp, garlic, and lemon butter sauce.",
+    "type": "pasta"
+  },
+  {
+    "name": "Chicken Parmesan",
+    "description": "Breaded chicken with marinara and cheese.",
+    "type": "main"
+  },
+  {
+    "name": "Grilled Salmon",
+    "description": "Grilled salmon with lemon herb sauce.",
+    "type": "main"
+  },
+  {
+    "name": "Beef Tenderloin",
+    "description": "Grilled beef tenderloin with peppercorn sauce.",
+    "type": "main"
+  },
+  {
+    "name": "Vegetable Stir-Fry",
+    "description": "Mixed vegetables stir-fried with soy sauce.",
+    "type": "main"
+  },
+  {
+    "name": "Pork Chops",
+    "description": "Grilled pork chops with apple glaze.",
+    "type": "main"
+  },
+  {
+    "name": "Lamb Kebabs",
+    "description": "Marinated lamb skewers with tzatziki sauce.",
+    "type": "main"
+  },
+  {
+    "name": "Grilled Chicken Breast",
+    "description": "Juicy grilled chicken with herb marinade.",
+    "type": "main"
+  },
+  {
+    "name": "Stuffed Bell Peppers",
+    "description": "Bell peppers stuffed with rice, beef, and spices.",
+    "type": "main"
+  },
+  {
+    "name": "Eggplant Parmesan",
+    "description": "Breaded eggplant with marinara and mozzarella.",
+    "type": "main"
+  },
+  {
+    "name": "Tiramisu",
+    "description": "Layered dessert with mascarpone cheese, espresso-soaked ladyfingers, and cocoa.",
+    "type": "dessert"
+  },
+  {
+    "name": "Gelato",
+    "description": "Italian ice cream in various flavors.",
+    "type": "dessert"
+  },
+  {
+    "name": "Cannoli",
+    "description": "Tube-shaped shells filled with sweet ricotta cream.",
+    "type": "dessert"
+  },
+  {
+    "name": "Panna Cotta",
+    "description": "Creamy pudding with berry sauce.",
+    "type": "dessert"
+  },
+  {
+    "name": "Cheesecake",
+    "description": "Creamy cheesecake with graham cracker crust.",
+    "type": "dessert"
+  },
+  {
+    "name": "Chocolate Lava Cake",
+    "description": "Warm chocolate cake with a molten center.",
+    "type": "dessert"
+  },
+  {
+    "name": "Apple Pie",
+    "description": "Classic apple pie with flaky crust.",
+    "type": "dessert"
+  },
+  {
+    "name": "Creme Brulee",
+    "description": "Creamy custard with caramelized sugar top.",
+    "type": "dessert"
+  },
+  {
+    "name": "Lemon Tart",
+    "description": "Tangy lemon curd in a buttery pastry crust.",
+    "type": "dessert"
+  },
+  {
+    "name": "Baklava",
+    "description": "Layered pastry with nuts and honey syrup.",
+    "type": "dessert"
+  },
+  {
+    "name": "Espresso",
+    "description": "A strong, concentrated coffee brewed by forcing hot water through finely-ground beans.",
+    "type": "coffee",
+    "sizes": { "S": "$2.50", "M": "$3.50", "L": "$4.50" }
+  },
+  {
+    "name": "Cappuccino",
+    "description": "Espresso with steamed milk and a thick layer of foam.",
+    "type": "coffee",
+    "sizes": { "S": "$3.00", "M": "$4.00", "L": "$5.00" }
+  },
+  {
+    "name": "Latte",
+    "description": "Espresso with steamed milk and a light foam topping.",
+    "type": "coffee",
+    "sizes": { "S": "$3.50", "M": "$4.50", "L": "$5.50" }
+  },
+  {
+    "name": "Mocha",
+    "description": "Espresso with steamed milk, chocolate syrup, and whipped cream.",
+    "type": "coffee",
+    "sizes": { "S": "$4.00", "M": "$5.00", "L": "$6.00" }
+  },
+  {
+    "name": "Americano",
+    "description": "Espresso diluted with hot water.",
+    "type": "coffee",
+    "sizes": { "S": "$2.00", "M": "$3.00", "L": "$4.00" }
+  },
+  {
+    "name": "Flat White",
+    "description": "Espresso with steamed milk and minimal foam.",
+    "type": "coffee",
+    "sizes": { "S": "$3.50", "M": "$4.50", "L": "$5.50" }
+  },
+  {
+    "name": "Macchiato",
+    "description": "Espresso with a dash of frothy milk.",
+    "type": "coffee",
+    "sizes": { "S": "$3.00", "M": "$4.00", "L": "$5.00" }
+  },
+  {
+    "name": "Cortado",
+    "description": "Espresso with an equal amount of steamed milk.",
+    "type": "coffee",
+    "sizes": { "S": "$3.00", "M": "$4.00", "L": "$5.00" }
+  },
+  {
+    "name": "Iced Latte",
+    "description": "Chilled espresso with cold milk and ice.",
+    "type": "iced_coffee",
+    "sizes": { "S": "$3.50", "M": "$4.50", "L": "$5.50" }
+  },
+  {
+    "name": "Iced Mocha",
+    "description": "Chilled espresso with chocolate syrup, cold milk, and ice.",
+    "type": "iced_coffee",
+    "sizes": { "S": "$4.00", "M": "$5.00", "L": "$6.00" }
+  },
+  {
+    "name": "Cold Brew",
+    "description": "Smooth, strong coffee brewed cold for hours.",
+    "type": "iced_coffee",
+    "sizes": { "S": "$3.00", "M": "$4.00", "L": "$5.00" }
+  },
+  {
+    "name": "Iced Americano",
+    "description": "Chilled espresso with cold water and ice.",
+    "type": "iced_coffee",
+    "sizes": { "S": "$2.50", "M": "$3.50", "L": "$4.50" }
+  },
+  {
+    "name": "Nitro Cold Brew",
+    "description": "Cold brew infused with nitrogen for a creamy texture.",
+    "type": "iced_coffee",
+    "sizes": { "S": "$4.00", "M": "$5.00", "L": "$6.00" }
+  },
+  {
+    "name": "Iced Cappuccino",
+    "description": "Chilled espresso with cold foam and ice.",
+    "type": "iced_coffee",
+    "sizes": { "S": "$3.50", "M": "$4.50", "L": "$5.50" }
+  },
+  {
+    "name": "Iced Flat White",
+    "description": "Chilled espresso with cold milk and minimal foam.",
+    "type": "iced_coffee",
+    "sizes": { "S": "$3.50", "M": "$4.50", "L": "$5.50" }
+  },
+  {
+    "name": "Green Tea",
+    "description": "Hot brewed green tea.",
+    "type": "tea",
+    "sizes": { "S": "$2.00", "M": "$3.00", "L": "$4.00" }
+  },
+  {
+    "name": "Chamomile Tea",
+    "description": "Soothing herbal tea with floral notes.",
+    "type": "tea",
+    "sizes": { "S": "$2.00", "M": "$3.00", "L": "$4.00" }
+  },
+  {
+    "name": "Earl Grey",
+    "description": "Black tea with bergamot flavor.",
+    "type": "tea",
+    "sizes": { "S": "$2.00", "M": "$3.00", "L": "$4.00" }
+  },
+  {
+    "name": "Peppermint Tea",
+    "description": "Refreshing herbal tea with minty flavor.",
+    "type": "tea",
+    "sizes": { "S": "$2.00", "M": "$3.00", "L": "$4.00" }
+  },
+  {
+    "name": "Jasmine Tea",
+    "description": "Green tea with jasmine flower aroma.",
+    "type": "tea",
+    "sizes": { "S": "$2.50", "M": "$3.50", "L": "$4.50" }
+  },
+  {
+    "name": "Oolong Tea",
+    "description": "Partially fermented tea with a rich flavor.",
+    "type": "tea",
+    "sizes": { "S": "$2.50", "M": "$3.50", "L": "$4.50" }
+  },
+  {
+    "name": "Rooibos Tea",
+    "description": "Herbal tea with a sweet, nutty flavor.",
+    "type": "tea",
+    "sizes": { "S": "$2.00", "M": "$3.00", "L": "$4.00" }
+  },
+  {
+    "name": "Red Wine",
+    "description": "Glass or bottle of red wine.",
+    "type": "wine",
+    "sizes": { "Glass": "$6.00", "Bottle": "$25.00" }
+  },
+  {
+    "name": "White Wine",
+    "description": "Glass or bottle of white wine.",
+    "type": "wine",
+    "sizes": { "Glass": "$5.50", "Bottle": "$22.00" }
+  },
+  {
+    "name": "Rosé Wine",
+    "description": "Glass or bottle of rosé wine.",
+    "type": "wine",
+    "sizes": { "Glass": "$5.50", "Bottle": "$22.00" }
+  },
+  {
+    "name": "Sparkling Wine",
+    "description": "Glass or bottle of sparkling wine.",
+    "type": "wine",
+    "sizes": { "Glass": "$7.00", "Bottle": "$30.00" }
+  },
+  {
+    "name": "Pinot Grigio",
+    "description": "Crisp white wine with citrus notes.",
+    "type": "wine",
+    "sizes": { "Glass": "$6.00", "Bottle": "$24.00" }
+  },
+  {
+    "name": "Cabernet Sauvignon",
+    "description": "Bold red wine with dark fruit flavors.",
+    "type": "wine",
+    "sizes": { "Glass": "$6.50", "Bottle": "$26.00" }
+  },
+  {
+    "name": "Lemonade",
+    "description": "Freshly squeezed lemonade.",
+    "type": "soft_drink",
+    "sizes": { "S": "$2.50", "M": "$3.50", "L": "$4.50" }
+  },
+  {
+    "name": "Iced Tea",
+    "description": "Chilled black tea with lemon.",
+    "type": "soft_drink",
+    "sizes": { "S": "$2.00", "M": "$3.00", "L": "$4.00" }
+  },
+  {
+    "name": "Cola",
+    "description": "Classic carbonated cola drink.",
+    "type": "soft_drink",
+    "sizes": { "S": "$2.00", "M": "$3.00", "L": "$4.00" }
+  },
+  {
+    "name": "Ginger Ale",
+    "description": "Refreshing carbonated ginger drink.",
+    "type": "soft_drink",
+    "sizes": { "S": "$2.00", "M": "$3.00", "L": "$4.00" }
+  },
+  {
+    "name": "Sparkling Water",
+    "description": "Carbonated water with a hint of lemon.",
+    "type": "soft_drink",
+    "sizes": { "S": "$1.50", "M": "$2.50", "L": "$3.50" }
+  },
+  {
+    "name": "Root Beer",
+    "description": "Sweet carbonated root beer.",
+    "type": "soft_drink",
+    "sizes": { "S": "$2.00", "M": "$3.00", "L": "$4.00" }
+  },
+  {
+    "name": "Orange Juice",
+    "description": "Freshly squeezed orange juice.",
+    "type": "juice",
+    "sizes": { "S": "$3.00", "M": "$4.00", "L": "$5.00" }
+  },
+  {
+    "name": "Apple Juice",
+    "description": "Freshly pressed apple juice.",
+    "type": "juice",
+    "sizes": { "S": "$3.00", "M": "$4.00", "L": "$5.00" }
+  },
+  {
+    "name": "Pineapple Juice",
+    "description": "Tropical pineapple juice.",
+    "type": "juice",
+    "sizes": { "S": "$3.00", "M": "$4.00", "L": "$5.00" }
+  },
+  {
+    "name": "Cranberry Juice",
+    "description": "Tart cranberry juice.",
+    "type": "juice",
+    "sizes": { "S": "$3.00", "M": "$4.00", "L": "$5.00" }
+  },
+  {
+    "name": "Grapefruit Juice",
+    "description": "Freshly squeezed grapefruit juice.",
+    "type": "juice",
+    "sizes": { "S": "$3.00", "M": "$4.00", "L": "$5.00" }
+  },
+  {
+    "name": "Mango Smoothie",
+    "description": "Blended mango with yogurt and honey.",
+    "type": "smoothie",
+    "sizes": { "S": "$4.00", "M": "$5.00", "L": "$6.00" }
+  },
+  {
+    "name": "Strawberry Smoothie",
+    "description": "Blended strawberries with yogurt and honey.",
+    "type": "smoothie",
+    "sizes": { "S": "$4.00", "M": "$5.00", "L": "$6.00" }
+  },
+  {
+    "name": "Green Smoothie",
+    "description": "Blended spinach, kale, banana, and apple.",
+    "type": "smoothie",
+    "sizes": { "S": "$4.50", "M": "$5.50", "L": "$6.50" }
+  },
+  {
+    "name": "Banana Smoothie",
+    "description": "Blended bananas with yogurt and honey.",
+    "type": "smoothie",
+    "sizes": { "S": "$4.00", "M": "$5.00", "L": "$6.00" }
+  },
+  {
+    "name": "Berry Blast Smoothie",
+    "description": "Blended mixed berries with yogurt.",
+    "type": "smoothie",
+    "sizes": { "S": "$4.50", "M": "$5.50", "L": "$6.50" }
+  },
+  {
+    "name": "Caesar Salad",
+    "description": "Romaine lettuce with croutons, Parmesan, and Caesar dressing.",
+    "type": "salad"
+  },
+  {
+    "name": "Greek Salad",
+    "description": "Cucumbers, tomatoes, feta, olives, and red onions with Greek dressing.",
+    "type": "salad"
+  },
+  {
+    "name": "Cobb Salad",
+    "description": "Mixed greens with chicken, bacon, eggs, avocado, and blue cheese.",
+    "type": "salad"
+  },
+  {
+    "name": "Spinach Salad",
+    "description": "Spinach with strawberries, walnuts, and balsamic vinaigrette.",
+    "type": "salad"
+  },
+  {
+    "name": "Wedge Salad",
+    "description": "Iceberg lettuce with bacon, tomatoes, and blue cheese dressing.",
+    "type": "salad"
+  },
+  {
+    "name": "Tomato Soup",
+    "description": "Creamy tomato soup with basil.",
+    "type": "soup"
+  },
+  {
+    "name": "Minestrone",
+    "description": "Hearty vegetable soup with pasta and beans.",
+    "type": "soup"
+  },
+  {
+    "name": "Clam Chowder",
+    "description": "Creamy chowder with clams, potatoes, and onions.",
+    "type": "soup"
+  },
+  {
+    "name": "Lentil Soup",
+    "description": "Spiced lentil soup with carrots and celery.",
+    "type": "soup"
+  },
+  {
+    "name": "Chicken Noodle Soup",
+    "description": "Classic soup with chicken, noodles, and vegetables.",
+    "type": "soup"
+  },
+  {
+    "name": "Grilled Cheese Sandwich",
+    "description": "Toasted sandwich with melted cheddar cheese.",
+    "type": "sandwich"
+  },
+  {
+    "name": "BLT Sandwich",
+    "description": "Bacon, lettuce, and tomato with mayo on toasted bread.",
+    "type": "sandwich"
+  },
+  {
+    "name": "Turkey Club",
+    "description": "Turkey, bacon, lettuce, and tomato with mayo on toast.",
+    "type": "sandwich"
+  },
+  {
+    "name": "Veggie Wrap",
+    "description": "Tortilla wrap with hummus, cucumber, tomatoes, and spinach.",
+    "type": "sandwich"
+  },
+  {
+    "name": "Philly Cheesesteak",
+    "description": "Sliced beef with melted cheese and onions on a roll.",
+    "type": "sandwich"
+  }
+]

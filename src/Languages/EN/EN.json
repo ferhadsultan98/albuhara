@@ -1,0 +1,45 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "menu": "Menu",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "About Us",
+    "welcome": "Welcome To Albuhara",
+    "description": "Your cozy escape for rich coffee, soothing tea, and delicious food. Whether you're starting your morning with a fresh brew, enjoying a relaxed afternoon tea, or craving flavorful meals made with care.",
+    "address": "Asiq Molla Cümə 44B, Baku, Azerbaijan AZ 1969"
+  },
+  "buta": {
+    "title": "Albuhara",
+    "subtitle": "Lounge",
+    "tagline": "Harmony of Taste and Atmosphere"
+  },
+  "interior": {
+    "title": "OUR INTERIOR",
+    "description": "We welcome you to a space designed with comfort and style in mind. Our modern cozy atmosphere creates the perfect setting to relax. Every corner is thoughtfully arranged, every detail is chosen to make you feel at home."
+  },
+  "contact": {
+    "title": "CONTACT US",
+    "subtitle": "Welcome to Albuhara",
+    "address": "Asiq Molla Cümə 44B, Baku, Azerbaijan AZ 1969",
+    "hours": "Mon-Sat: 9:00-18:00"
+  },
+  "menu": {
+    "noItems": "no information found",
+    "header": "Menu",
+    "vegan": "Vegan",
+    "new": "New"
+  },
+  "footer": {
+    "about": "About",
+    "home": "Home",
+    "menu": "Menu",
+    "contact": "Contact",
+    "terms": "Terms",
+    "privacy": "Privacy",
+    "cookies": "Cookies",
+    "copyright": "© 2027 Albuhara. All rights reserved."
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "nav": {
+    "home": "Ana Səhifə",
+    "about": "Haqqımızda",
+    "menu": "Menyu",
+    "contact": "Əlaqə"
+  },
+  "about": {
+    "title": "Haqqımızda",
+    "welcome": "Albuhara-ya xoş gəlmisiniz",
+    "description": "Sizin rahat məkanınız — zəngin qəhvə, sakitləşdirici çay və dadlı yeməklər üçün. İstər səhərinizi təzə dəmlənmiş qəhvə ilə başlayın, istər rahat günortanı çayla keçirin, istərsə də diqqətlə hazırlanmış ləzzətli yeməklərin dadını çıxarın.",
+    "address": "Aşıq Molla Cümə 44B, Bakı, Azərbaycan AZ 1969"
+  },
+    "buta": {
+    "title": "Albuhara",
+    "subtitle": "Lounge",
+    "tagline": "Dadın və Atmosferin Vəhdəti"
+  },
+   "interior": {
+    "title": "İNTERİYERİMİZ",
+    "description": "Sizi rahatlıq və zövqlə dizayn edilmiş bir məkana dəvət edirik. Müasir və rahat atmosfer istirahətiniz üçün ideal şərait yaradır. Hər künc diqqətlə düzülüb, hər detal isə özünüzü evdəki kimi hiss etməyiniz üçün seçilib."
+  },
+  "contact": {
+    "title": "ƏLAQƏ",
+    "subtitle": "Albuhara-ya xoş gəlmisiniz",
+    "address": "Aşıq Molla Cümə 44B, Bakı, Azərbaycan AZ 1969",
+    "hours": "B-Ş : 9:00-18:00"
+  },
+  "menu": {
+      "noItems": "üzrə məlumat tapılmadı",
+    "header": "Menyu",
+    "vegan": "Vegan",
+    "new": "Yeni"
+  },
+   "footer": {
+    "about": "Haqqımızda",
+    "home": "Əsas səhifə",
+    "menu": "Menyu",
+    "contact": "Əlaqə",
+    "terms": "Şərtlər",
+    "privacy": "Məxfilik",
+    "cookies": "Çərəzlər",
+    "copyright": "© 2027 Albuhara. Bütün hüquqlar qorunur."
+  }
+
+}

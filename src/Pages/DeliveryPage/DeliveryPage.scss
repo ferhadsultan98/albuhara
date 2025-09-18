@@ -1,0 +1,53 @@
+.deliveryContainer {
+  padding: 7rem 2rem;
+  color: #f5e8c7;
+  text-align: center;
+
+  .title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .deliveryDescription {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+  }
+
+  .deliveryOptions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .logoCard {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+    }
+
+    .logoImage {
+      max-width: 70%;
+      max-height: 70%;
+      object-fit: contain;
+    }
+  }
+}

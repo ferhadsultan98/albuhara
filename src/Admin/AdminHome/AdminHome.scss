@@ -1,0 +1,117 @@
+.adminHomeContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #1a0b0e;
+  color: #fff;
+
+  .adminHomeTitle {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .slider {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    justify-content: center;
+    padding: 10px;
+
+    .slide {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4/3; /* Smaller, more compact ratio */
+      overflow: hidden;
+      border-radius: 6px;
+      background-color: #2a1b1e;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+      .slideImage {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .deleteButton {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        background-color: #ff4d4d;
+        color: #fff;
+        border: none;
+        padding: 6px 10px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.8rem;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: #cc0000;
+        }
+      }
+    }
+  }
+
+  .adminForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    gap: 10px;
+
+    .fileInput {
+      padding: 10px;
+      background-color: #2a1b1e;
+      color: #fff;
+      border: 1px solid #3a2b2e;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .uploadButton {
+      background-color: #4a3b3e;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #5a4b4e;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 15px;
+
+    .adminHomeTitle {
+      font-size: 1.5rem;
+    }
+
+    .slider {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 10px;
+
+      .slide {
+        aspect-ratio: 4/3;
+
+        .deleteButton {
+          font-size: 0.7rem;
+          padding: 4px 8px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .slider {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 8px;
+    }
+  }
+}

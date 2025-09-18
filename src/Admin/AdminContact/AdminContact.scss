@@ -1,0 +1,96 @@
+.adminContactContainer {
+  padding: 20px;
+  text-align: center;
+
+  .adminContactTitle {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .adminContactInfo {
+    margin-bottom: 20px;
+    .contactItem {
+      margin: 20px auto;
+      max-width: 400px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  .formInput {
+    padding: 10px;
+    border: 1px solid #291115;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    &:disabled {
+      background-color: #e0e0e0;
+      color: #333;
+      cursor: not-allowed;
+    }
+  }
+
+  .adminForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+
+    .formInput {
+      padding: 10px;
+      border: 1px solid #291115;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+
+    .updateButton {
+      background-color: #291115;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 4px;
+      &:hover {
+        background-color: #3a1b22;
+      }
+    }
+
+    .cancelButton {
+      background-color: #ccc;
+      color: #333;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 4px;
+      &:hover {
+        background-color: #bbb;
+      }
+    }
+  }
+
+  .editButton {
+    background-color: #291115;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 10px;
+    &:hover {
+      background-color: #3a1b22;
+    }
+  }
+
+  .errorMessage {
+    color: red;
+    margin-bottom: 10px;
+  }
+
+  .successMessage {
+    color: green;
+    margin-bottom: 10px;
+  }
+}
