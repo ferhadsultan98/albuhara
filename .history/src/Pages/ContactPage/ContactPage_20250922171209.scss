@@ -1,0 +1,193 @@
+@import "../../Styles/fonts.scss";
+
+.contactSection {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .contactContainer {
+    width: 100%;
+    border-radius: 0;
+    overflow: hidden;
+    max-width: 1200px;
+    .contactContent {
+      display: flex;
+      min-height: 500px;
+
+      @media (max-width: 968px) {
+        flex-direction: column;
+      }
+
+      .contactInfo {
+        flex: 1;
+        padding: 2rem;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+        @media (max-width: 768px) {
+          padding-top: 5rem;
+        }
+
+        @media (max-width: 480px) {
+          padding: 5rem 0px;
+        }
+        .contactHeader {
+          @media (max-width: 768px) {
+            text-align: center;
+          }
+        }
+        .contactTitle {
+          font-size: 28px;
+          font-weight: bold;
+          margin-bottom: 1.2rem;
+          letter-spacing: 2px;
+          color: #f7e7d0;
+          font-family: "Copperplate";
+
+          @media (max-width: 768px) {
+            font-size: 1.75rem;
+          }
+
+          @media (max-width: 480px) {
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+          }
+        }
+
+        .contactSubtitle {
+          font-size: 20px;
+          opacity: 0.8;
+          margin-bottom: 5rem;
+          color: #f7e7d0;
+          font-family: "Copperplate";
+
+          @media (max-width: 480px) {
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+          }
+        }
+
+        .contactDetails {
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+
+          @media (max-width: 480px) {
+            gap: 1.5rem;
+          }
+
+          .contactItem {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: transform 0.2s ease;
+            @media (max-width: 768px) {
+              flex-direction: column;
+            }
+
+            &:hover {
+              transform: translateX(5px);
+
+              .contactIcon {
+                background-color: rgba(255, 255, 255, 0.2);
+                transform: scale(1.1);
+              }
+            }
+
+            .contactIcon {
+              flex-shrink: 0;
+              width: 48px;
+              height: 48px;
+              background-color: rgba(255, 255, 255, 0.1);
+              border-radius: 8px;
+              display: flex;
+              align-items: center;
+              font-size: 30px;
+              justify-content: center;
+              transition: all 0.3s ease;
+              @media (max-width: 480px) {
+                width: 35px;
+                height: 35px;
+              }
+
+              svg {
+                width: 24px;
+                height: 24px;
+                color: #f7e7d0;
+
+                @media (max-width: 480px) {
+                  width: 16px;
+                  height: 16px;
+                }
+              }
+            }
+
+            .contactText {
+              flex: 1;
+
+              p {
+                margin: 0;
+                line-height: 1.5;
+                color: #f7e7d0;
+                font-size: 0.95rem;
+                max-width: 200px;
+
+                @media (max-width: 480px) {
+                  font-size: 0.9rem;
+                }
+
+                &:first-child {
+                  margin-bottom: 2px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .mapContainer {
+        flex: 1;
+        filter: grayscale(1.5);
+        padding: 1.5rem;
+        color: #f7e7d0;
+
+        position: relative;
+        min-height: 400px;
+
+        @media (max-width: 968px) {
+          min-height: 300px;
+          padding: 1.5rem;
+        }
+
+        @media (max-width: 480px) {
+          min-height: 250px;
+          padding: 1rem;
+        }
+
+        .mapIframe {
+          width: 100%;
+          height: 100%;
+          min-height: 350px;
+          border: none;
+          border-radius: 12px;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+          height: 500px;
+          width: 700px;
+          @media (max-width: 968px) {
+            min-height: 250px;
+            width: 100%;
+            height: 100%;
+          }
+
+          @media (max-width: 480px) {
+            min-height: 200px;
+            border-radius: 8px;
+          }
+        }
+      }
+    }
+  }
+}
