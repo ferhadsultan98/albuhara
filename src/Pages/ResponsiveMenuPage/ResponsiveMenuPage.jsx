@@ -43,8 +43,84 @@ const ResponsiveMenuPage = () => {
       ? menuItems
       : menuItems.filter((item) => item.category === selectedCategory);
 
+  // Group items by category when "all" is selected
+  const groupedItems = selectedCategory === "all" 
+    ? categories
+        .filter(cat => cat.id !== "all")
+        .map(category => ({
+          category,
+          items: menuItems.filter(item => item.category === category.id)
+        }))
+        .filter(group => group.items.length > 0)
+    : [{ category: null, items: filteredItems }];
+
+  const renderMenuItem = (item, index) => {
+    const isSimple = !item.multi_size || !item.variants || item.variants.length === 0;
+    return (
+      <div key={`${item.id}-${index}`} className="ResponsiveMenuPageMenuCard">
+        <div className="ResponsiveMenuPageMenuCardContent">
+          <div className="ResponsiveMenuPageMenuCardText">
+            <h3 className="ResponsiveMenuPageMenuCardTitle">
+              {item.name[i18n.language.charAt(0).toUpperCase() + i18n.language.slice(1)].toUpperCase()}
+            </h3>
+            {isSimple ? (
+              <>
+                {item.description[i18n.language.charAt(0).toUpperCase() + i18n.language.slice(1)] && (
+                  <p className="ResponsiveMenuPageMenuCardDescription">
+                    {item.description[i18n.language.charAt(0).toUpperCase() + i18n.language.slice(1)]}
+                  </p>
+                )}
+                <div className="ResponsiveMenuPageMenuCardPrice">{item.base_price}₼</div>
+              </>
+            ) : (
+              <div className="ResponsiveMenuPageMenuCardSizes">
+                {item.variants.map((variant) => (
+                  <div className="ResponsiveMenuPageSizeItem" key={variant.id}>
+                    <span className="ResponsiveMenuPageSizeLabel">
+                      {variant.size[i18n.language.charAt(0).toUpperCase() + i18n.language.slice(1)]}
+                    </span>
+                    <span className="ResponsiveMenuPageSizePrice">{variant.price}₼</span>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+          <div className="ResponsiveMenuPageMenuCardImageContainer">
+            <img
+              src={item.image || "/assets/test1.png"}
+              alt={item.name[i18n.language.charAt(0).toUpperCase() + i18n.language.slice(1)]}
+              className="ResponsiveMenuPageMenuCardImage"
+            />
+            <div className="ResponsiveMenuPageMenuCardBadges">
+              {item.is_vegan && (
+                <span className="ResponsiveMenuPageBadge ResponsiveMenuPageBadgeVegan">
+                  <i>
+                    <LuVegan />
+                  </i>{" "}
+                  {i18n.t("menu.vegan")}
+                </span>
+              )}
+              {item.is_new && (
+                <span className="ResponsiveMenuPageBadge ResponsiveMenuPageBadgeNew">
+                  {i18n.t("menu.new")}
+                </span>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <div className="ResponsiveMenuPageMenuContainer">
+      {/* Menu Title */}
+      <div className="ResponsiveMenuPageHeader">
+        <h1 className="ResponsiveMenuPageTitle">
+          {i18n.language === 'az' ? 'MENYU' : i18n.language === 'en' ? 'MENU' : 'МЕНЮ'}
+        </h1>
+      </div>
+
       <div className="ResponsiveMenuPageCategoryFilter">
         {categories.map((category) => (
           <button
@@ -58,65 +134,20 @@ const ResponsiveMenuPage = () => {
           </button>
         ))}
       </div>
-      <div className="ResponsiveMenuPageMenuGrid">
-        {filteredItems.map((item, index) => {
-          const isSimple = !item.multi_size || !item.variants || item.variants.length === 0;
-          return (
-            <div key={`${item.id}-${index}`} className="ResponsiveMenuPageMenuCard">
-              <div className="ResponsiveMenuPageMenuCardContent">
-                <div className="ResponsiveMenuPageMenuCardText">
-                  <h3 className="ResponsiveMenuPageMenuCardTitle">
-                    {item.name[i18n.language.charAt(0).toUpperCase() + i18n.language.slice(1)].toUpperCase()}
-                  </h3>
-                  {isSimple ? (
-                    <>
-                      {item.description[i18n.language.charAt(0).toUpperCase() + i18n.language.slice(1)] && (
-                        <p className="ResponsiveMenuPageMenuCardDescription">
-                          {item.description[i18n.language.charAt(0).toUpperCase() + i18n.language.slice(1)]}
-                        </p>
-                      )}
-                      <div className="ResponsiveMenuPageMenuCardPrice">{item.base_price}₼</div>
-                    </>
-                  ) : (
-                    <div className="ResponsiveMenuPageMenuCardSizes">
-                      {item.variants.map((variant) => (
-                        <div className="ResponsiveMenuPageSizeItem" key={variant.id}>
-                          <span className="ResponsiveMenuPageSizeLabel">
-                            {variant.size[i18n.language.charAt(0).toUpperCase() + i18n.language.slice(1)]}
-                          </span>
-                          <span className="ResponsiveMenuPageSizePrice">{variant.price}₼</span>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </div>
-                <div className="ResponsiveMenuPageMenuCardImageContainer">
-                  <img
-                    src={item.image || "/assets/test1.png"}
-                    alt={item.name[i18n.language.charAt(0).toUpperCase() + i18n.language.slice(1)]}
-                    className="ResponsiveMenuPageMenuCardImage"
-                  />
-                  <div className="ResponsiveMenuPageMenuCardBadges">
-                    {item.is_vegan && (
-                      <span className="ResponsiveMenuPageBadge ResponsiveMenuPageBadgeVegan">
-                        <i>
-                          <LuVegan />
-                        </i>{" "}
-                        {i18n.t("menu.vegan")}
-                      </span>
-                    )}
-                    {item.is_new && (
-                      <span className="ResponsiveMenuPageBadge ResponsiveMenuPageBadgeNew">
-                        {i18n.t("menu.new")}
-                      </span>
-                    )}
-                  </div>
-                </div>
-              </div>
-            </div>
-          );
-        })}
-      </div>
+
+      {/* Render grouped items */}
+      {groupedItems.map((group, groupIndex) => (
+        <div key={groupIndex} className="ResponsiveMenuPageCategorySection">
+          {group.category && (
+            <h2 className="ResponsiveMenuPageCategoryTitle">
+              {group.category.title[i18n.language.charAt(0).toUpperCase() + i18n.language.slice(1)]}
+            </h2>
+          )}
+          <div className="ResponsiveMenuPageMenuGrid">
+            {group.items.map((item, index) => renderMenuItem(item, index))}
+          </div>
+        </div>
+      ))}
     </div>
   );
 };

@@ -1,7 +1,29 @@
+@import "../../Styles/fonts.scss";
+
 .ResponsiveMenuPageMenuContainer {
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
+
+  .ResponsiveMenuPageHeader {
+    text-align: center;
+    margin-top: 30px;
+
+    .ResponsiveMenuPageTitle {
+      font-size: 36px;
+      font-weight: 700;
+      color: #f7e7d0;
+      margin: 0;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+        font-family: "Copperplate";
+
+      @media (max-width: 768px) {
+        font-size: 28px;
+        letter-spacing: 1px;
+      }
+    }
+  }
 
   .ResponsiveMenuPageCategoryFilter {
     display: flex;
@@ -39,6 +61,26 @@
       &:hover {
         background-color: #F7E7D0;
         color: black;
+      }
+    }
+  }
+
+  .ResponsiveMenuPageCategorySection {
+    margin-bottom: 40px;
+
+    .ResponsiveMenuPageCategoryTitle {
+      font-size: 24px;
+      font-weight: 600;
+      color: #f7e7d0;
+      margin: 0 0 20px 0;
+      padding-left: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-left: 4px solid #f7e7d0;
+
+      @media (max-width: 768px) {
+        font-size: 20px;
+        margin-bottom: 15px;
       }
     }
   }
@@ -87,7 +129,7 @@
         min-height: 120px;
 
         .ResponsiveMenuPageMenuCardTitle {
-          font-family: "Arial", sans-serif;
+            font-family: "Copperplate";
           font-size: 14px;
           font-weight: 700;
           color: #2c1810;
@@ -199,7 +241,6 @@
           }
         }
 
-        // Add a subtle overlay for better badge visibility
         &::after {
           content: "";
           position: absolute;
@@ -207,11 +248,6 @@
           right: 0;
           width: 60px;
           height: 40px;
-          // background: linear-gradient(
-          //   135deg,
-          //   rgba(0, 0, 0, 0) 0%,
-          //   rgba(0, 0, 0, 0.1) 100%
-          // );
           border-radius: 0 0 0 20px;
           pointer-events: none;
         }
@@ -219,7 +255,6 @@
     }
   }
 
-  // Add a "Yeni" (New) badge styling for Turkish
   .new-badge {
     background: #ff5722 !important;
     color: white;
