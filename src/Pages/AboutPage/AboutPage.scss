@@ -27,8 +27,8 @@
       font-size: 16px;
       max-width: 900px;
       margin-bottom: 3rem;
-       font-family: "ArticulatCF", sans-serif;
-  font-weight: 400; /* Regular */
+      font-family: "ArticulatCF", sans-serif;
+      font-weight: 400; /* Regular */
     }
 
     .location {
@@ -48,14 +48,17 @@
         max-width: 40px;
         margin: 0 auto;
         font-size: 2rem;
+        @media (max-width: 768px) {
+          background: none;
+        }
       }
 
       .address {
         font-size: 18px;
         font-family: "Copperplate";
-          max-width: 280px;
-          margin: 0 auto;
-          line-height: 32px;
+        max-width: 280px;
+        margin: 0 auto;
+        line-height: 32px;
       }
     }
   }
