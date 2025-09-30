@@ -71,7 +71,7 @@ const ContactPage = () => {
 
             <div className="mapContainer">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.175853018824!2d49.8671!3d40.4093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d6bd6211cf9%3A0x343f6b5e7ae56c6b!2sBaku%2C%20Azerbaijan!5e0!3m2!1sen!2s!4v1629794729807!5m2!1sen!2s"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2749.2406036946204!2d49.85719757548259!3d40.40863455613291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d571a08d273%3A0xa667c99d58b02bbf!2zNDRiIEHFn8SxcSBNb2xsYSBDw7xtyZksIEJha8Sx!5e1!3m2!1sen!2saz!4v1759233376011!5m2!1sen!2saz%22%20width=%22600%22%20height=%22450%22%20style=%22border:0;%22%20allowfullscreen=%22%22%20loading=%22lazy%22%20referrerpolicy=%22no-referrer-when-downgrade%22%3E%3C/iframe%3E"
                 className="mapIframe"
                 allowFullScreen=""
                 loading="lazy"

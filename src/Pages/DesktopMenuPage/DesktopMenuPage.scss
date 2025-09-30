@@ -1,4 +1,4 @@
-@import '../../Styles/fonts.scss';
+@import "../../Styles/fonts.scss";
 
 .DescktopMenuPageComponent {
   padding: {
@@ -9,7 +9,7 @@
   .DescktopMenuHeader {
     font-size: 24px;
     font-weight: 700;
-    color: #F7E7D0;
+    color: #f7e7d0;
     text-align: center;
     margin-bottom: 3rem;
     text-transform: uppercase;
@@ -46,12 +46,12 @@
       transition: background-color 0.3s;
 
       &.active {
-        background-color: #F7E7D0;
+        background-color: #f7e7d0;
         color: black;
       }
 
       &:hover {
-        background-color: #F7E7D0;
+        background-color: #f7e7d0;
         color: black;
       }
     }
@@ -82,24 +82,27 @@
   // Category section title (left-aligned)
   .categorySectionTitle {
     font-size: 20px;
-    font-weight: 600;
-    color: #F7E7D0;
+    color: #f7e7d0;
     text-align: left;
     margin-bottom: 1.5rem;
-    font-family: "Copperplate";
-    text-transform: uppercase;
+    font-family: "ArticulatCF", sans-serif;
+    font-weight: 400;
     letter-spacing: 1px;
   }
 
   .noItemsMessage {
     font-size: 18px;
-    color: #F7E7D0;
+    color: #f7e7d0;
     text-align: center;
     margin: 40px auto;
     padding: 20px;
     background-color: #291115;
     border-radius: 8px;
-    font-family: "Copperplate";
+    font-family: "ArticulatCF", sans-serif;
+    font-weight: 400;
+    span {
+      margin-right: 5px;
+    }
   }
 
   .categoryContainer {

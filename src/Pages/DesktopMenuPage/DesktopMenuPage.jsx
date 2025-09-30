@@ -41,22 +41,26 @@ const DesktopMenuPage = () => {
   }, []);
 
   // Group items by category when "all" is selected
-  const groupedItems = selectedCategory === "all" 
-    ? categories.slice(1).reduce((acc, category) => {
-        const categoryItems = menuItems.filter(item => item.category === category.id);
-        if (categoryItems.length > 0) {
-          acc.push({
-            category,
-            items: categoryItems
-          });
-        }
-        return acc;
-      }, [])
-    : [];
+  const groupedItems =
+    selectedCategory === "all"
+      ? categories.slice(1).reduce((acc, category) => {
+          const categoryItems = menuItems.filter(
+            (item) => item.category === category.id
+          );
+          if (categoryItems.length > 0) {
+            acc.push({
+              category,
+              items: categoryItems,
+            });
+          }
+          return acc;
+        }, [])
+      : [];
 
-  const filteredItems = selectedCategory === "all"
-    ? []
-    : menuItems.filter((item) => item.category === selectedCategory);
+  const filteredItems =
+    selectedCategory === "all"
+      ? []
+      : menuItems.filter((item) => item.category === selectedCategory);
 
   const handleLoadMore = () => {
     setVisibleItems((prev) => prev + 8);
@@ -74,9 +78,11 @@ const DesktopMenuPage = () => {
             }`}
             onClick={() => setSelectedCategory(category.id)}
           >
-            {category.title[
-              i18n.language.charAt(0).toUpperCase() + i18n.language.slice(1)
-            ]}
+            {
+              category.title[
+                i18n.language.charAt(0).toUpperCase() + i18n.language.slice(1)
+              ]
+            }
           </button>
         ))}
       </div>
@@ -87,9 +93,12 @@ const DesktopMenuPage = () => {
           {groupedItems.map((group) => (
             <div key={group.category.id} className="categorySection">
               <h2 className="categorySectionTitle">
-                {group.category.title[
-                  i18n.language.charAt(0).toUpperCase() + i18n.language.slice(1)
-                ]}
+                {
+                  group.category.title[
+                    i18n.language.charAt(0).toUpperCase() +
+                      i18n.language.slice(1)
+                  ]
+                }
               </h2>
               <div className="categoryContainer">
                 {group.items.map((item) => (
@@ -129,20 +138,24 @@ const DesktopMenuPage = () => {
                         ].toUpperCase()}
                       </h3>
                       <p>
-                        {item.description[
-                          i18n.language.charAt(0).toUpperCase() +
-                            i18n.language.slice(1)
-                        ]}
+                        {
+                          item.description[
+                            i18n.language.charAt(0).toUpperCase() +
+                              i18n.language.slice(1)
+                          ]
+                        }
                       </p>
                       {item.multi_size && item.variants.length > 0 ? (
                         <div className="sizesPrices">
                           {item.variants.map((variant) => (
                             <div className="sizePriceItem" key={variant.id}>
                               <span className="size">
-                                {variant.size[
-                                  i18n.language.charAt(0).toUpperCase() +
-                                    i18n.language.slice(1)
-                                ]}
+                                {
+                                  variant.size[
+                                    i18n.language.charAt(0).toUpperCase() +
+                                      i18n.language.slice(1)
+                                  ]
+                                }
                               </span>
                               <span className="price">{variant.price}</span>
                             </div>
@@ -175,6 +188,15 @@ const DesktopMenuPage = () => {
             </h2>
             {filteredItems.length === 0 ? (
               <div className="noItemsMessage">
+                <span>
+                  {
+                    categories.find((cat) => cat.id === selectedCategory)
+                      ?.title[
+                      i18n.language.charAt(0).toUpperCase() +
+                        i18n.language.slice(1)
+                    ]
+                  }
+                </span>
                 {t("menu.noItems")}
               </div>
             ) : (
@@ -216,20 +238,24 @@ const DesktopMenuPage = () => {
                         ].toUpperCase()}
                       </h3>
                       <p>
-                        {item.description[
-                          i18n.language.charAt(0).toUpperCase() +
-                            i18n.language.slice(1)
-                        ]}
+                        {
+                          item.description[
+                            i18n.language.charAt(0).toUpperCase() +
+                              i18n.language.slice(1)
+                          ]
+                        }
                       </p>
                       {item.multi_size && item.variants.length > 0 ? (
                         <div className="sizesPrices">
                           {item.variants.map((variant) => (
                             <div className="sizePriceItem" key={variant.id}>
                               <span className="size">
-                                {variant.size[
-                                  i18n.language.charAt(0).toUpperCase() +
-                                    i18n.language.slice(1)
-                                ]}
+                                {
+                                  variant.size[
+                                    i18n.language.charAt(0).toUpperCase() +
+                                      i18n.language.slice(1)
+                                  ]
+                                }
                               </span>
                               <span className="price">{variant.price}</span>
                             </div>
