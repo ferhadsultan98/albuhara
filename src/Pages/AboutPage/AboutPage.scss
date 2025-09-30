@@ -20,7 +20,9 @@
     .welcomeTitle {
       font-size: 20px;
       margin-bottom: 1rem;
-      font-family: "Copperplate";
+     font-family: "ArticulatCF", sans-serif;
+      font-weight: 400;
+    
     }
 
     .aboutText {
@@ -28,7 +30,7 @@
       max-width: 900px;
       margin-bottom: 3rem;
       font-family: "ArticulatCF", sans-serif;
-      font-weight: 400; /* Regular */
+      font-weight: 400; 
     }
 
     .location {
@@ -55,7 +57,8 @@
 
       .address {
         font-size: 18px;
-        font-family: "Copperplate";
+        font-family: "ArticulatCF", sans-serif;
+      font-weight: 400; 
         max-width: 280px;
         margin: 0 auto;
         line-height: 32px;
