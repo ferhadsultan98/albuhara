@@ -30,7 +30,17 @@
     "noItems": "no information found",
     "header": "Menu",
     "vegan": "Vegan",
-    "new": "New"
+    "new": "New",
+    "empty": {
+      "allCategories": {
+        "title": "No Products Available Yet",
+        "description": "Our menu is being prepared. Please wait a moment, delicious products will be added soon."
+      },
+      "category": {
+        "title": "No Products Found in This Category",
+        "description": "No products have been added to the {{category}} category yet. Please check other categories."
+      }
+    }
   },
   "footer": {
     "about": "About",

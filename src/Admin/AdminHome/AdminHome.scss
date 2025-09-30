@@ -1,117 +1,506 @@
-.adminHomeContainer {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+.admin-home-container {
   background-color: #1a0b0e;
-  color: #fff;
+  color: #ebe8e8;
+  min-height: 100vh;
+  padding: 32px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 
-  .adminHomeTitle {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
+  // Page header
+  .page-header {
     text-align: center;
-  }
+    margin-bottom: 40px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(235, 232, 232, 0.1);
 
-  .slider {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 15px;
-    justify-content: center;
-    padding: 10px;
-
-    .slide {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 4/3; /* Smaller, more compact ratio */
-      overflow: hidden;
-      border-radius: 6px;
-      background-color: #2a1b1e;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-
-      .slideImage {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
+    .header-content {
+      .page-title {
+        font-size: 36px;
+        font-weight: 700;
+        color: #faefdf;
+        margin: 0 0 8px 0;
+        letter-spacing: -0.02em;
       }
 
-      .deleteButton {
-        position: absolute;
-        top: 5px;
-        right: 5px;
-        background-color: #ff4d4d;
-        color: #fff;
-        border: none;
-        padding: 6px 10px;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 0.8rem;
-        transition: background-color 0.3s;
-
-        &:hover {
-          background-color: #cc0000;
-        }
+      .page-subtitle {
+        color: rgba(235, 232, 232, 0.7);
+        font-size: 16px;
+        margin: 0;
       }
     }
   }
 
-  .adminForm {
+  // Error banner
+  .error-banner {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    margin: 20px 0;
-    gap: 10px;
+    gap: 12px;
+    padding: 16px 24px;
+    background-color: rgba(170, 4, 28, 0.15);
+    color: #ff6b6b;
+    border-left: 4px solid #aa041c;
+    border-radius: 8px;
+    margin-bottom: 32px;
+    font-weight: 500;
 
-    .fileInput {
-      padding: 10px;
-      background-color: #2a1b1e;
-      color: #fff;
-      border: 1px solid #3a2b2e;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    .uploadButton {
-      background-color: #4a3b3e;
-      color: #fff;
+    .error-close {
+      margin-left: auto;
+      background: none;
       border: none;
-      padding: 10px 20px;
-      border-radius: 4px;
+      color: #ff6b6b;
       cursor: pointer;
-      font-size: 1rem;
-      transition: background-color 0.3s;
+      padding: 4px;
+      border-radius: 4px;
+      transition: background-color 0.2s ease;
 
       &:hover {
-        background-color: #5a4b4e;
+        background-color: rgba(255, 107, 107, 0.1);
       }
     }
   }
 
-  @media (max-width: 768px) {
-    padding: 15px;
+  // Slider sections
+  .slider-section {
+    margin-bottom: 48px;
 
-    .adminHomeTitle {
-      font-size: 1.5rem;
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+
+      .section-title {
+        font-size: 24px;
+        font-weight: 600;
+        color: #faefdf;
+        margin: 0;
+      }
+
+      .slide-count {
+        span {
+          background-color: rgba(247, 231, 208, 0.1);
+          color: #f7e7d0;
+          padding: 4px 12px;
+          border-radius: 16px;
+          font-size: 14px;
+          font-weight: 500;
+        }
+      }
     }
 
-    .slider {
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      gap: 10px;
+    // Upload card
+    .upload-card {
+      background-color: #291115;
+      border-radius: 16px;
+      border: 1px solid rgba(235, 232, 232, 0.1);
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 
-      .slide {
-        aspect-ratio: 4/3;
+      .upload-form {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
 
-        .deleteButton {
-          font-size: 0.7rem;
-          padding: 4px 8px;
+        .drop-zone {
+          position: relative;
+          border: 2px dashed rgba(247, 231, 208, 0.3);
+          border-radius: 12px;
+          padding: 40px 20px;
+          text-align: center;
+          background-color: rgba(247, 231, 208, 0.02);
+          transition: all 0.3s ease;
+          cursor: pointer;
+          overflow: hidden;
+
+          &:hover {
+            border-color: rgba(247, 231, 208, 0.5);
+            background-color: rgba(247, 231, 208, 0.05);
+          }
+
+          &.drag-active {
+            border-color: #f7e7d0;
+            background-color: rgba(247, 231, 208, 0.1);
+            border-style: solid;
+          }
+
+          &.has-preview {
+            padding: 16px;
+          }
+
+          .file-input {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+          }
+
+          .drop-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+
+            .drop-icon {
+              width: 64px;
+              height: 64px;
+              background-color: rgba(247, 231, 208, 0.1);
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: #f7e7d0;
+              transition: all 0.3s ease;
+            }
+
+            .drop-text {
+              .main-text {
+                font-size: 18px;
+                font-weight: 600;
+                color: #faefdf;
+                margin: 0 0 4px 0;
+              }
+
+              .sub-text {
+                font-size: 14px;
+                color: rgba(235, 232, 232, 0.7);
+                margin: 0 0 8px 0;
+              }
+
+              .format-text {
+                font-size: 12px;
+                color: rgba(235, 232, 232, 0.5);
+                margin: 0;
+              }
+            }
+          }
+
+          .preview-container {
+            position: relative;
+            max-width: 200px;
+            margin: 0 auto;
+
+            .preview-image {
+              width: 100%;
+              height: 120px;
+              object-fit: cover;
+              border-radius: 8px;
+              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            }
+
+            .clear-preview {
+              position: absolute;
+              top: -8px;
+              right: -8px;
+              width: 24px;
+              height: 24px;
+              background-color: #aa041c;
+              color: #ebe8e8;
+              border: none;
+              border-radius: 50%;
+              cursor: pointer;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              transition: all 0.2s ease;
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+
+              &:hover {
+                background-color: #8b0316;
+                transform: scale(1.1);
+              }
+            }
+          }
+        }
+
+        .upload-btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          padding: 12px 24px;
+          background-color: #f7e7d0;
+          color: #1a0b0e;
+          border: none;
+          border-radius: 8px;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          align-self: flex-start;
+
+          &:hover {
+            background-color: #e0d0b0;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(247, 231, 208, 0.3);
+          }
+
+          &:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+          }
+        }
+      }
+    }
+
+    // Slides container
+    .slides-container {
+      .loading-state {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 60px 20px;
+        gap: 16px;
+
+        .loading-spinner {
+          width: 32px;
+          height: 32px;
+          border: 3px solid rgba(247, 231, 208, 0.2);
+          border-left: 3px solid #f7e7d0;
+          border-radius: 50%;
+          animation: spin 1s linear infinite;
+        }
+
+        p {
+          color: rgba(235, 232, 232, 0.7);
+          margin: 0;
+        }
+      }
+
+      .slides-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 24px;
+
+        .slide-card {
+          background-color: #291115;
+          border-radius: 12px;
+          border: 1px solid rgba(235, 232, 232, 0.1);
+          overflow: hidden;
+          transition: all 0.3s ease;
+          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+
+          &:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+            border-color: rgba(247, 231, 208, 0.2);
+          }
+
+          .image-container {
+            position: relative;
+            aspect-ratio: 16/9;
+            overflow: hidden;
+
+            .slide-image {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              transition: transform 0.3s ease;
+            }
+
+            // Delete button - Always visible now
+            .delete-btn-always-visible {
+              position: absolute;
+              top: 8px;
+              right: 8px;
+              width: 32px;
+              height: 32px;
+              background-color: #aa041c;
+              color: #ebe8e8;
+              border: none;
+              border-radius: 50%;
+              cursor: pointer;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              transition: all 0.2s ease;
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+              z-index: 10;
+
+              &:hover {
+                background-color: #8b0316;
+                transform: scale(1.1);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+              }
+
+              &:active {
+                transform: scale(0.95);
+              }
+            }
+          }
+
+          .slide-info {
+            padding: 12px 16px;
+            background-color: rgba(247, 231, 208, 0.05);
+
+            .slide-id {
+              font-size: 12px;
+              color: rgba(235, 232, 232, 0.7);
+              font-weight: 500;
+            }
+          }
+        }
+      }
+
+      .empty-state {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 80px 20px;
+        text-align: center;
+
+        .empty-icon {
+          width: 80px;
+          height: 80px;
+          background-color: rgba(247, 231, 208, 0.1);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: rgba(247, 231, 208, 0.5);
+          margin-bottom: 24px;
+        }
+
+        h3 {
+          font-size: 20px;
+          font-weight: 600;
+          color: #faefdf;
+          margin: 0 0 8px 0;
+        }
+
+        p {
+          color: rgba(235, 232, 232, 0.6);
+          margin: 0;
         }
       }
     }
   }
+}
 
-  @media (max-width: 480px) {
-    .slider {
-      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-      gap: 8px;
+// Animations
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+// Responsive design
+@media (max-width: 1024px) {
+  .admin-home-container {
+    padding: 24px;
+
+    .slides-grid {
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 20px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-home-container {
+    padding: 16px;
+
+    .page-header {
+      .page-title {
+        font-size: 28px;
+      }
+    }
+
+    .slider-section {
+      margin-bottom: 32px;
+
+      .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+
+        .section-title {
+          font-size: 20px;
+        }
+      }
+
+      .upload-card {
+        padding: 20px;
+
+        .drop-zone {
+          padding: 32px 16px;
+
+          .drop-content {
+            gap: 12px;
+
+            .drop-icon {
+              width: 48px;
+              height: 48px;
+            }
+
+            .drop-text .main-text {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+
+      .slides-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 16px;
+
+        .slide-card .image-container .delete-btn-always-visible {
+          width: 28px;
+          height: 28px;
+          top: 6px;
+          right: 6px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-home-container {
+    padding: 12px;
+
+    .page-header {
+      .page-title {
+        font-size: 24px;
+      }
+
+      .page-subtitle {
+        font-size: 14px;
+      }
+    }
+
+    .slider-section {
+      .upload-card {
+        padding: 16px;
+
+        .drop-zone {
+          padding: 24px 12px;
+        }
+      }
+
+      .slides-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+
+        .slide-card .image-container .delete-btn-always-visible {
+          width: 24px;
+          height: 24px;
+          top: 4px;
+          right: 4px;
+
+          svg {
+            width: 12px;
+            height: 12px;
+          }
+        }
+      }
+    }
+
+    .error-banner {
+      padding: 12px 16px;
+      font-size: 14px;
     }
   }
 }

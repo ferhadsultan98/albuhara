@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate, Outlet, NavLink } from "react-router-dom";
 import "./AdminLayout.scss";
 import { CiLogout } from "react-icons/ci";
@@ -9,9 +9,12 @@ import { RiHome4Line } from "react-icons/ri";
 import { IoMdInformationCircleOutline } from "react-icons/io";
 import { AiOutlineAntDesign } from "react-icons/ai";
 import { MdOutlinePermContactCalendar } from "react-icons/md";
+import { HiMenuAlt3 } from "react-icons/hi";
+import { IoClose } from "react-icons/io5";
 
 const AdminLayout = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(false);
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -20,107 +23,160 @@ const AdminLayout = () => {
     navigate("/login");
   };
 
+  // Close sidebar when clicking outside on mobile
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (isSidebarOpen && window.innerWidth <= 768) {
+        const sidebar = document.querySelector('.sidebar');
+        const toggle = document.querySelector('.sidebarToggle');
+        
+        if (sidebar && !sidebar.contains(event.target) && !toggle.contains(event.target)) {
+          setIsSidebarOpen(false);
+        }
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [isSidebarOpen]);
+
+  // Handle window resize
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768) {
+        setIsSidebarOpen(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const menuItems = [
+    {
+      to: "/admin",
+      icon: <MdDashboardCustomize />,
+      label: "Dashboard",
+      end: true
+    },
+    {
+      to: "/admin/admin-category",
+      icon: <BiCategory />,
+      label: "Category"
+    },
+    {
+      to: "/admin/admin-product",
+      icon: <MdProductionQuantityLimits />,
+      label: "Product"
+    },
+    {
+      to: "/admin/admin-home",
+      icon: <RiHome4Line />,
+      label: "Home"
+    },
+    {
+      to: "/admin/admin-about",
+      icon: <IoMdInformationCircleOutline />,
+      label: "About"
+    },
+    {
+      to: "/admin/admin-contact",
+      icon: <MdOutlinePermContactCalendar />,
+      label: "Contact"
+    },
+    {
+      to: "/admin/admin-decor",
+      icon: <AiOutlineAntDesign />,
+      label: "Decor"
+    }
+  ];
+
   return (
     <div className="adminLayoutContainer">
+      {/* Mobile overlay */}
+      {isSidebarOpen && <div className="sidebar-overlay" onClick={() => setIsSidebarOpen(false)} />}
+      
+      {/* Mobile toggle button */}
       <button
         className="sidebarToggle"
         onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+        aria-label="Toggle navigation"
       >
-        {isSidebarOpen ? "Close" : "Menu"}
+        {isSidebarOpen ? <IoClose /> : <HiMenuAlt3 />}
+        <span className="toggle-text">{isSidebarOpen ? "Close" : "Menu"}</span>
       </button>
-      <aside className={`sidebar ${isSidebarOpen ? "open" : ""}`}>
+
+      {/* Sidebar */}
+      <aside className={`sidebar ${isSidebarOpen ? "open" : ""} ${isCollapsed ? "collapsed" : ""}`}>
         <div className="sidebarHeader">
-          <h2 className="sidebarTitle">Albuhara ADMIN</h2>
+          <div className="logo-container">
+            <div className="logo-icon">A</div>
+            <h2 className={`sidebarTitle ${isCollapsed ? "hidden" : ""}`}>
+              Albuhara ADMIN
+            </h2>
+          </div>
+          
+          {/* Desktop collapse button */}
+          <button 
+            className="collapse-btn desktop-only"
+            onClick={() => setIsCollapsed(!isCollapsed)}
+            aria-label="Collapse sidebar"
+          >
+            <HiMenuAlt3 className={`collapse-icon ${isCollapsed ? "rotated" : ""}`} />
+          </button>
         </div>
+
         <nav className="sidebarNav">
-          <NavLink
-            to="/admin" // Changed from "/dashboard" to match index route
-            className={({ isActive }) => `navItem ${isActive ? "active" : ""}`}
-            onClick={() => setIsSidebarOpen(false)}
-            end // Ensures exact match for index route
+          {menuItems.map((item) => (
+            <NavLink
+              key={item.to}
+              to={item.to}
+              className={({ isActive }) => `navItem ${isActive ? "active" : ""}`}
+              onClick={() => setIsSidebarOpen(false)}
+              end={item.end}
+              title={isCollapsed ? item.label : ""}
+            >
+              <span className="nav-icon">{item.icon}</span>
+              <span className={`nav-label ${isCollapsed ? "hidden" : ""}`}>
+                {item.label}
+              </span>
+              <span className="nav-indicator"></span>
+            </NavLink>
+          ))}
+          
+          <div className="nav-divider"></div>
+          
+          <button 
+            className="navItem logoutButton" 
+            onClick={handleLogout}
+            title={isCollapsed ? "Logout" : ""}
           >
-            {" "}
-            <i className="sideBarIcon">
-              <MdDashboardCustomize />
-            </i>
-            Dashboard
-          </NavLink>
-          <NavLink
-            to="/admin/admin-category"
-            className={({ isActive }) => `navItem ${isActive ? "active" : ""}`}
-            onClick={() => setIsSidebarOpen(false)}
-          >
-            <i className="sideBarIcon">
-              <BiCategory />
-            </i>
-            Category
-          </NavLink>
-          {/* Add Profile route if needed, or remove if not implemented */}
-          <NavLink
-            to="/admin/admin-product"
-            className={({ isActive }) => `navItem ${isActive ? "active" : ""}`}
-            onClick={() => setIsSidebarOpen(false)}
-          >
-            {" "}
-            <i className="sideBarIcon">
-              <MdProductionQuantityLimits />
-            </i>
-            Product
-          </NavLink>
-          <NavLink
-            to="/admin/admin-home"
-            className={({ isActive }) => `navItem ${isActive ? "active" : ""}`}
-            onClick={() => setIsSidebarOpen(false)}
-          >
-            {" "}
-            <i className="sideBarIcon">
-              <RiHome4Line />
-            </i>
-            Home
-          </NavLink>
-          <NavLink
-            to="/admin/admin-about"
-            className={({ isActive }) => `navItem ${isActive ? "active" : ""}`}
-            onClick={() => setIsSidebarOpen(false)}
-          >
-            {" "}
-            <i className="sideBarIcon">
-              <IoMdInformationCircleOutline />
-            </i>
-            About
-          </NavLink>
-          <NavLink
-            to="/admin/admin-contact"
-            className={({ isActive }) => `navItem ${isActive ? "active" : ""}`}
-            onClick={() => setIsSidebarOpen(false)}
-          >
-            {" "}
-            <i className="sideBarIcon">
-              <MdOutlinePermContactCalendar />
-            </i>
-            Contact
-          </NavLink>
-          <NavLink
-            to="/admin/admin-decor"
-            className={({ isActive }) => `navItem ${isActive ? "active" : ""}`}
-            onClick={() => setIsSidebarOpen(false)}
-          >
-            {" "}
-            <i className="sideBarIcon">
-              <AiOutlineAntDesign />
-            </i>
-            Decor
-          </NavLink>
-          <button className="navItem logoutButton" onClick={handleLogout}>
-            <i className="sideBarIcon">
+            <span className="nav-icon">
               <CiLogout />
-            </i>
-            Logout
+            </span>
+            <span className={`nav-label ${isCollapsed ? "hidden" : ""}`}>
+              Logout
+            </span>
           </button>
         </nav>
+
+        {/* User info section */}
+        <div className={`user-info ${isCollapsed ? "collapsed" : ""}`}>
+          <div className="user-avatar">
+            <span>A</span>
+          </div>
+          <div className={`user-details ${isCollapsed ? "hidden" : ""}`}>
+            <p className="user-name">Admin</p>
+            <p className="user-role">Administrator</p>
+          </div>
+        </div>
       </aside>
-      <main className={`contentArea ${isSidebarOpen ? "sidebar-open" : ""}`}>
-        <Outlet />
+
+      {/* Main content */}
+      <main className={`contentArea ${isSidebarOpen ? "sidebar-open" : ""} ${isCollapsed ? "sidebar-collapsed" : ""}`}>
+        <div className="content-wrapper">
+          <Outlet />
+        </div>
       </main>
     </div>
   );

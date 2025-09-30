@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./ResponsiveMenuPage.scss";
 import { LuVegan } from "react-icons/lu";
+import { Coffee, Search, ChefHat } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 const ResponsiveMenuPage = () => {
@@ -8,7 +9,7 @@ const ResponsiveMenuPage = () => {
   const [menuItems, setMenuItems] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("all");
   const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -53,6 +54,34 @@ const ResponsiveMenuPage = () => {
         }))
         .filter(group => group.items.length > 0)
     : [{ category: null, items: filteredItems }];
+
+  // Get current category name for empty state
+  const getCurrentCategoryName = () => {
+    if (selectedCategory === "all") return null;
+    const category = categories.find(cat => cat.id === selectedCategory);
+    return category ? category.title[i18n.language.charAt(0).toUpperCase() + i18n.language.slice(1)] : "";
+  };
+
+  // Empty State Component
+  const EmptyState = ({ categoryName, isAllCategories = false }) => (
+    <div className="ResponsiveMenuPageEmptyState">
+      <div className="ResponsiveMenuPageEmptyStateIcon">
+        {isAllCategories ? <ChefHat size={48} /> : <Coffee size={48} />}
+      </div>
+      <h3 className="ResponsiveMenuPageEmptyStateTitle">
+        {isAllCategories 
+          ? t("menu.empty.allCategories.title")
+          : t("menu.empty.category.title")
+        }
+      </h3>
+      <p className="ResponsiveMenuPageEmptyStateDescription">
+        {isAllCategories 
+          ? t("menu.empty.allCategories.description")
+          : t("menu.empty.category.description", { category: categoryName })
+        }
+      </p>
+    </div>
+  );
 
   const renderMenuItem = (item, index) => {
     const isSimple = !item.multi_size || !item.variants || item.variants.length === 0;
@@ -135,19 +164,28 @@ const ResponsiveMenuPage = () => {
         ))}
       </div>
 
-      {/* Render grouped items */}
-      {groupedItems.map((group, groupIndex) => (
-        <div key={groupIndex} className="ResponsiveMenuPageCategorySection">
-          {group.category && (
-            <h2 className="ResponsiveMenuPageCategoryTitle">
-              {group.category.title[i18n.language.charAt(0).toUpperCase() + i18n.language.slice(1)]}
-            </h2>
-          )}
-          <div className="ResponsiveMenuPageMenuGrid">
-            {group.items.map((item, index) => renderMenuItem(item, index))}
+      {/* Render grouped items or empty state */}
+      {groupedItems.length === 0 && selectedCategory === "all" ? (
+        // No items in any category
+        <EmptyState isAllCategories={true} />
+      ) : selectedCategory !== "all" && filteredItems.length === 0 ? (
+        // No items in selected category
+        <EmptyState categoryName={getCurrentCategoryName()} />
+      ) : (
+        // Render items
+        groupedItems.map((group, groupIndex) => (
+          <div key={groupIndex} className="ResponsiveMenuPageCategorySection">
+            {group.category && (
+              <h2 className="ResponsiveMenuPageCategoryTitle">
+                {group.category.title[i18n.language.charAt(0).toUpperCase() + i18n.language.slice(1)]}
+              </h2>
+            )}
+            <div className="ResponsiveMenuPageMenuGrid">
+              {group.items.map((item, index) => renderMenuItem(item, index))}
+            </div>
           </div>
-        </div>
-      ))}
+        ))
+      )}
     </div>
   );
 };
