@@ -9,20 +9,31 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   .aboutInfoContainer {
     padding: 15px;
+
     .aboutUs {
       font-size: 24px;
       margin-bottom: 1rem;
       text-transform: uppercase;
       font-family: "Copperplate";
     }
+
     .welcomeTitle {
       font-size: 20px;
       margin-bottom: 1rem;
-     font-family: "ArticulatCF", sans-serif;
+      font-family: "ArticulatCF", sans-serif;
       font-weight: 400;
-    
+
+      &.ios {
+        font-family: "Copperplate", serif;
+      }
+
+      &.android {
+        font-family: "ArticulatCF", sans-serif;
+      font-weight: 400;
+      }
     }
 
     .aboutText {
@@ -30,7 +41,7 @@
       max-width: 900px;
       margin-bottom: 3rem;
       font-family: "ArticulatCF", sans-serif;
-      font-weight: 400; 
+      font-weight: 400;
     }
 
     .location {
@@ -50,6 +61,7 @@
         max-width: 40px;
         margin: 0 auto;
         font-size: 2rem;
+
         @media (max-width: 768px) {
           background: none;
         }
@@ -58,10 +70,19 @@
       .address {
         font-size: 18px;
         font-family: "ArticulatCF", sans-serif;
-      font-weight: 400; 
+        font-weight: 400;
         max-width: 280px;
         margin: 0 auto;
         line-height: 32px;
+
+        &.ios {
+          font-family: "Copperplate", serif;
+        }
+
+        &.android {
+          font-family: "ArticulatCF", sans-serif;
+      font-weight: 400;;
+        }
       }
     }
   }
