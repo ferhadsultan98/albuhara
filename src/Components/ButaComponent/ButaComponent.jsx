@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./ButaComponent.scss";
 import api from "../../Api";
 import { useTranslation } from "react-i18next";
+import BlurShadowImage from '../../../public/assets/blurback.png'
 
 const ButaComponent = () => {
   const { t } = useTranslation();
@@ -100,15 +101,13 @@ const ButaComponent = () => {
           </svg>
         </div>
       </div>
-      <div className="blurShadow"></div>
+   
       <div className="ButaAlbuharaTextComponentContainer">
         <h1 className="ButaAlbuharaTextComponentTitle">{t("buta.title")}</h1>
-        <h1 className="ButaAlbuharaTextComponentAltTitle">
-          {t("buta.subtitle")}
-        </h1>
+        <h1 className="ButaAlbuharaTextComponentAltTitle">{t("buta.subtitle")}</h1>
         <p className="ButaAlbuharaTextComponentSubtitle">{t("buta.tagline")}</p>
       </div>
- </>
+    </>
   );
 };
 
