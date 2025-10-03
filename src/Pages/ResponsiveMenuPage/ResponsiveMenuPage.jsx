@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./ResponsiveMenuPage.scss";
 import { LuVegan } from "react-icons/lu";
 import { PiStarFourFill } from "react-icons/pi";
-import { Coffee, Search, ChefHat } from "lucide-react";
+import { Search, ChefHat } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 const ResponsiveMenuPage = () => {
@@ -70,20 +70,17 @@ const ResponsiveMenuPage = () => {
 
   // Empty State Component
   const EmptyState = ({ categoryName, isAllCategories = false }) => (
-    <div className="ResponsiveMenuPageEmptyState">
-      <div className="ResponsiveMenuPageEmptyStateIcon">
-        {isAllCategories ? <ChefHat size={48} /> : <Coffee size={48} />}
-      </div>
-      <h3 className="ResponsiveMenuPageEmptyStateTitle">
-        {isAllCategories
-          ? t("menu.empty.allCategories.title")
-          : t("menu.empty.category.title")}
-      </h3>
-      <p className="ResponsiveMenuPageEmptyStateDescription">
-        {isAllCategories
-          ? t("menu.empty.allCategories.description")
-          : t("menu.empty.category.description", { category: categoryName })}
-      </p>
+    <div className="noItemsMessage">
+     <span>
+                  {
+                    categories.find((cat) => cat.id === selectedCategory)
+                      ?.title[
+                      i18n.language.charAt(0).toUpperCase() +
+                        i18n.language.slice(1)
+                    ]
+                  }
+                </span>
+                {t("menu.noItems")}
     </div>
   );
 
