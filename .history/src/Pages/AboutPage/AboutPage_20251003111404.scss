@@ -23,11 +23,16 @@
     .welcomeTitle {
       font-size: 20px;
       margin-bottom: 1rem;
-      font-family: "Copperplate", serif;
+      font-family: "ArticulatCF", sans-serif;
+      font-weight: 400;
+
+      &.ios {
+        font-family: "Copperplate", serif;
+      }
 
       &.android {
         font-family: "ArticulatCF", sans-serif;
-        font-weight: 400;
+      font-weight: 400;
       }
     }
 
@@ -35,9 +40,8 @@
       font-size: 16px;
       max-width: 900px;
       margin-bottom: 3rem;
-      font-weight: 400;
       font-family: "ArticulatCF", sans-serif;
-          font-weight: 400;
+      font-weight: 400;
     }
 
     .location {
@@ -65,15 +69,19 @@
 
       .address {
         font-size: 18px;
-        font-family: "Copperplate", serif;
+        font-family: "ArticulatCF", sans-serif;
         font-weight: 400;
         max-width: 280px;
         margin: 0 auto;
         line-height: 32px;
 
+        &.ios {
+          font-family: "Copperplate", serif;
+        }
+
         &.android {
           font-family: "ArticulatCF", sans-serif;
-          font-weight: 400;
+      font-weight: 400;;
         }
       }
     }
