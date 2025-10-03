@@ -157,14 +157,14 @@ const DesktopMenuPage = () => {
                                   ]
                                 }
                               </span>
-                              <span className="price">{variant.price}</span>
+                              <span className="price">{variant.price} AZN</span>
                             </div>
                           ))}
                         </div>
                       ) : (
                         <div className="sizesPrices">
                           <div className="sizePriceItem">
-                            <span className="price">{item.base_price}AZN</span>
+                            <span className="price">{item.base_price} AZN</span>
                           </div>
                         </div>
                       )}

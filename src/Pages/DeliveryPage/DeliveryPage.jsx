@@ -1,15 +1,19 @@
-import React from 'react'
-import './DeliveryPage.scss'
-import BoltLogo from '../../../public/assets/delivery/bolt.png'
-import YangoLogo from '../../../public/assets/delivery/yango.png'
-import WoltLogo from '../../../public/assets/delivery/wolt.png'
+import React from "react";
+import "./DeliveryPage.scss";
+import BoltLogo from "../../../public/assets/delivery/bolt.png";
+import YangoLogo from "../../../public/assets/delivery/yango.png";
+import WoltLogo from "../../../public/assets/delivery/wolt.png";
+import usePlatform from "../../Hooks/usePlatform";
 
 function DeliveryPage() {
+  const platform = usePlatform(); // 🔹 iOS, Android və ya other
+
   return (
     <div className="deliveryContainer">
-      <h2 className="title">Fast & Reliable Delivery</h2>
+      <h2 className={`title ${platform}`}>Fast & Reliable Delivery</h2>
       <p className="deliveryDescription">
-        Your order will be delivered right to your doorstep in no time. Enjoy a smooth and secure delivery experience with us.
+        Your order will be delivered right to your doorstep in no time. Enjoy a
+        smooth and secure delivery experience with us.
       </p>
       <div className="deliveryOptions">
         <div className="logoCard">
@@ -30,5 +34,5 @@ function DeliveryPage() {
       </div>
     </div>
   );
-};
-export default DeliveryPage
+}
+export default DeliveryPage;

@@ -5,10 +5,12 @@ import { FiPhoneCall } from "react-icons/fi";
 import "./ContactPage.scss";
 import ButaComponent from "../../Components/ButaComponent/ButaComponent";
 import { useTranslation } from "react-i18next";
+import usePlatform from "../../Hooks/usePlatform";
 
 const ContactPage = () => {
   const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
+  const platform = usePlatform(); // 🔹 iOS, Android və ya other
 
   const handleResize = useCallback(() => {
     setIsVisible(window.innerWidth < 744);
@@ -29,7 +31,7 @@ const ContactPage = () => {
             <div className="contactInfo">
               <div className="contactHeader">
                 <h2 className="contactTitle">{t("contact.title")}</h2>
-                <p className="contactSubtitle">{t("contact.subtitle")}</p>
+                <p className={`contactSubtitle ${platform}`}>{t("contact.subtitle")}</p>
               </div>
               <div className="contactDetails">
                 <div className="contactItem">
@@ -83,6 +85,7 @@ const ContactPage = () => {
         </div>
       </section>
       {isVisible && <ButaComponent />}
+      <div style={{marginBottom: "80px"}}></div>
     </>
   );
 };

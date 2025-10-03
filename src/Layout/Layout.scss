@@ -1,0 +1,13 @@
+.mainLayout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; // səhifənin tam hündürlüyü
+
+  .mainContent {
+    flex: 1; // qalan bütün boşluğu tutur
+  }
+
+  .footer {
+    margin-top: auto; // həmişə ən altda qalır
+  }
+}
