@@ -1,0 +1,207 @@
+@import "../../Styles/fonts.scss";
+
+.errorSection {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+
+  .errorContainer {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .errorContent {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 3rem;
+      padding: 2rem;
+
+      @media (max-width: 768px) {
+        gap: 2rem;
+        padding: 1.5rem;
+      }
+
+      @media (max-width: 480px) {
+        gap: 1.5rem;
+        padding: 1rem;
+      }
+
+      .errorNumber {
+        font-size: clamp(120px, 20vw, 200px);
+        font-weight: bold;
+        color: #f7e7d0;
+        font-family: "Copperplate", serif;
+        letter-spacing: 10px;
+        line-height: 1;
+        opacity: 0.9;
+        animation: glitch 2s infinite;
+        text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
+
+        @media (max-width: 768px) {
+          font-size: clamp(100px, 18vw, 160px);
+          letter-spacing: 8px;
+        }
+
+        @media (max-width: 480px) {
+          font-size: clamp(80px, 15vw, 120px);
+          letter-spacing: 5px;
+        }
+      }
+
+      .errorTextContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        max-width: 600px;
+
+        @media (max-width: 768px) {
+          gap: 1.2rem;
+        }
+
+        @media (max-width: 480px) {
+          gap: 1rem;
+        }
+
+        .errorTitle {
+          font-size: clamp(24px, 4vw, 32px);
+          font-weight: bold;
+          color: #f7e7d0;
+          font-family: "Copperplate", serif;
+          letter-spacing: 2px;
+          margin: 0;
+
+          @media (max-width: 480px) {
+            letter-spacing: 1px;
+          }
+        }
+
+        .errorDescription {
+          font-size: clamp(16px, 2.5vw, 18px);
+          color: #f7e7d0;
+          opacity: 0.9;
+          line-height: 1.8;
+          font-family: "ArticulatCF", sans-serif;
+          font-weight: 400;
+          margin: 0;
+
+          @media (max-width: 480px) {
+            line-height: 1.6;
+          }
+        }
+
+        .errorActions {
+          display: flex;
+          gap: 1rem;
+          justify-content: center;
+          flex-wrap: wrap;
+          margin-top: 1rem;
+
+          @media (max-width: 480px) {
+            flex-direction: column;
+            width: 100%;
+            gap: 0.8rem;
+          }
+
+          .errorButton {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.9rem 2rem;
+            font-size: clamp(14px, 2vw, 16px);
+            font-family: "ArticulatCF", sans-serif;
+            font-weight: 500;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+            min-width: 150px;
+
+            @media (max-width: 480px) {
+              width: 100%;
+              padding: 1rem;
+              min-width: unset;
+            }
+
+            .buttonIcon {
+              font-size: 20px;
+
+              @media (max-width: 480px) {
+                font-size: 18px;
+              }
+            }
+
+            &.primary {
+              background-color: #f7e7d0;
+              color: #61464a;
+
+              &:hover {
+                background-color: #e8d4b8;
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba(247, 231, 208, 0.3);
+              }
+
+              &:active {
+                transform: translateY(0);
+              }
+            }
+
+            &.secondary {
+              background-color: rgba(247, 231, 208, 0.1);
+              color: #f7e7d0;
+              border: 2px solid #f7e7d0;
+
+              &:hover {
+                background-color: rgba(247, 231, 208, 0.2);
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba(247, 231, 208, 0.2);
+              }
+
+              &:active {
+                transform: translateY(0);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes glitch {
+  0%, 100% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(2px, -2px);
+  }
+  60% {
+    transform: translate(-2px, -2px);
+  }
+  80% {
+    transform: translate(2px, 2px);
+  }
+}
+
+@media (max-width: 768px) {
+  .errorSection {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .errorSection {
+    padding: 10px;
+  }
+}

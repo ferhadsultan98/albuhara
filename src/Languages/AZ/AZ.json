@@ -51,5 +51,11 @@
     "privacy": "Məxfilik",
     "cookies": "Çərəzlər",
     "copyright": "© 2027 Albuhara. Bütün hüquqlar qorunur."
+  },
+  "error": {
+    "title": "Səhifə Tapılmadı",
+    "description": "Təəssüf ki, axtardığınız səhifə mövcud deyil və ya köçürülüb. Xahiş edirik əsas səhifəyə qayıdın.",
+    "homeButton": "Ana Səhifə",
+    "backButton": "Geri Qayıt"
   }
 }

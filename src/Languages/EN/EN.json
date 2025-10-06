@@ -51,5 +51,11 @@
     "privacy": "Privacy",
     "cookies": "Cookies",
     "copyright": "© 2027 Albuhara. All rights reserved."
+  },
+  "error": {
+    "title": "Page Not Found",
+    "description": "Sorry, the page you are looking for does not exist or has been moved. Please return to the home page.",
+    "homeButton": "Home Page",
+    "backButton": "Go Back"
   }
 }

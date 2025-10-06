@@ -19,6 +19,7 @@ import AdminHome from './Admin/AdminHome/AdminHome';
 import AdminAbout from './Admin/AdminAbout/AdminAbout';
 import AdminContact from './Admin/AdminContact/AdminContact';
 import AdminDecor from './Admin/AdminDecor/AdminDecor';
+import ErrorPage from './Pages/ErrorPage/ErrorPage';
 
 // ScrollToTop component with smooth scrolling
 const ScrollToTop = () => {
@@ -78,6 +79,7 @@ function App() {
             <Route path="admin-contact" element={<AdminContact />} />
             <Route path="admin-decor" element={<AdminDecor />} />
           </Route>
+           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </Router>
     </I18nextProvider>
