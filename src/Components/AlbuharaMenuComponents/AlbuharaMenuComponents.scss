@@ -25,7 +25,11 @@
       height: 100%;
       object-fit: contain;
     }
-
+    svg {
+      width: 60%;
+      height: 60%;
+      object-fit: contain;
+    }
     .AlbuharaMenuComponentsText {
       position: absolute;
       top: 50%;
