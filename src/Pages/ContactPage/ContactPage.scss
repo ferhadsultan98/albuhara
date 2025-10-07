@@ -139,7 +139,7 @@
             .contactText {
               flex: 1;
 
-              p {
+              a {
                 margin: 0;
                 line-height: 1.5;
                 color: #f7e7d0;
@@ -147,6 +147,12 @@
                 max-width: 200px;
                 font-family: "ArticulatCF", sans-serif;
                 font-weight: 400;
+                color: inherit;
+                text-decoration: none;
+                transition: 0.5s;
+                &:hover{
+                  color: #cdbea9;
+                }
 
                 @media (max-width: 480px) {
                   font-size: 16px;

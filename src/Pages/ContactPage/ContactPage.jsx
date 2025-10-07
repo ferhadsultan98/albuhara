@@ -6,6 +6,7 @@ import "./ContactPage.scss";
 import ButaComponent from "../../Components/ButaComponent/ButaComponent";
 import { useTranslation } from "react-i18next";
 import usePlatform from "../../Hooks/usePlatform";
+import { Link } from "react-router-dom";
 
 const ContactPage = () => {
   const { t } = useTranslation();
@@ -39,7 +40,8 @@ const ContactPage = () => {
                     <FiPhoneCall />
                   </div>
                   <div className="contactText">
-                    <p>+994 55 555 55 55</p>
+                    <a href="tel:+994506501010" target="_blank">+99450 650 10 10</a>
+                    
                   </div>
                 </div>
 
@@ -48,7 +50,8 @@ const ContactPage = () => {
                     <FiMail />
                   </div>
                   <div className="contactText">
-                    <p>info@albuhara.az</p>
+                    <a href="mailto:info@albuhara.az" target="_blank">info@albuhara.az</a>
+                   
                   </div>
                 </div>
 
@@ -65,7 +68,8 @@ const ContactPage = () => {
                     <FiMapPin />
                   </div>
                   <div className="contactText">
-                    <p>{t("contact.address")}</p>
+                    <a href="https://maps.app.goo.gl/eoB3GGrkonkctRpa7" target="_blank">{t("contact.address")}</a>
+                 
                   </div>
                 </div>
               </div>
