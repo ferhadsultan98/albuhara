@@ -57,5 +57,11 @@
     "description": "Sorry, the page you are looking for does not exist or has been moved. Please return to the home page.",
     "homeButton": "Home Page",
     "backButton": "Go Back"
+  },
+  "albuhara": {
+    "delivery": "Delivery",
+    "menu": "Menu",
+    "address": "Address",
+    "contact": "Contact"
   }
 }

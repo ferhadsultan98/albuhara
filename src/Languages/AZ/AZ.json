@@ -57,5 +57,11 @@
     "description": "Təəssüf ki, axtardığınız səhifə mövcud deyil və ya köçürülüb. Xahiş edirik əsas səhifəyə qayıdın.",
     "homeButton": "Ana Səhifə",
     "backButton": "Geri Qayıt"
+  },
+  "albuhara": {
+    "delivery": "Çatdırılma",
+    "menu": "Menyu",
+    "address": "Ünvan",
+    "contact": "Əlaqə"
   }
 }
