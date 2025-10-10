@@ -3,7 +3,6 @@
   src: url("../../public/assets/fonts/Copperplate.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
-  
 }
 
 @font-face {
@@ -30,4 +29,11 @@
   src: url("../../public/assets/fonts/ArticulatCF-Medium.otf") format("opentype");
   font-weight: 500; /* medium */
   font-style: normal;
+}
+@font-face {
+  font-family: "Copperplate";
+  src: url("../../public/assets/fonts/Copperplate_Rus.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  unicode-range: U+0400-04FF; 
 }

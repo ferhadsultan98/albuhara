@@ -3,7 +3,7 @@ import { Spin as HamburgerSpin } from "hamburger-react";
 import { TbWorld } from "react-icons/tb";
 import "./Header.scss";
 import HorizontalLogo from "../../../public/assets/darkhorizontalalbuhara.png";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const Header = () => {
@@ -11,13 +11,25 @@ const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const { i18n } = useTranslation();
   const navigate = useNavigate();
+  const { lang } = useParams();
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const handleLanguageChange = (lang) => {
-    i18n.changeLanguage(lang);
+  const handleLanguageChange = (newLang) => {
+    // Get current path and replace language prefix
+    const pathWithoutLang = location.pathname.replace(`/${lang}`, '');
+    const newPath = `/${newLang}${pathWithoutLang}`;
+    
+    // Navigate to new language URL
+    navigate(newPath);
+    
+    // Update i18n
+    i18n.changeLanguage(newLang);
+    
+    // Close dropdowns
     setIsDropdownOpen(false);
     setIsMenuOpen(false);
   };
@@ -28,36 +40,36 @@ const Header = () => {
 
   const handleBookClick = () => {
     setIsMenuOpen(false);
-    navigate('/delivery');
+    navigate(`/${lang}/delivery`);
   };
 
   return (
     <header className="headerContainer">
       <div className="headerWrapper">
         <div className="logoContainer">
-          <Link to="/" onClick={handleNavClick}>
+          <Link to={`/${lang}/`} onClick={handleNavClick}>
             <img src={HorizontalLogo} alt="Logo" className="logoImage" />
           </Link>
         </div>
         <nav className={`navMenu ${isMenuOpen ? "active" : ""}`}>
           <ul className="navList">
             <li className="navItem">
-              <Link to="/" className="navLink" onClick={handleNavClick}>
+              <Link to={`/${lang}/`} className="navLink" onClick={handleNavClick}>
                 {i18n.t("nav.home")}
               </Link>
             </li>
             <li className="navItem">
-              <Link to="/about" className="navLink" onClick={handleNavClick}>
+              <Link to={`/${lang}/about`} className="navLink" onClick={handleNavClick}>
                 {i18n.t("nav.about")}
               </Link>
             </li>
             <li className="navItem">
-              <Link to="/menu" className="navLink" onClick={handleNavClick}>
+              <Link to={`/${lang}/menu`} className="navLink" onClick={handleNavClick}>
                 {i18n.t("nav.menu")}
               </Link>
             </li>
             <li className="navItem">
-              <Link to="/contact" className="navLink" onClick={handleNavClick}>
+              <Link to={`/${lang}/contact`} className="navLink" onClick={handleNavClick}>
                 {i18n.t("nav.contact")}
               </Link>
             </li>
@@ -67,7 +79,7 @@ const Header = () => {
             onClick={handleBookClick}
             aria-label="Book a delivery"
           >
-            Book
+            {i18n.t("nav.book") || "Book"}
           </button>
         </nav>
         <div className="menuLanguageContainer">
@@ -77,7 +89,7 @@ const Header = () => {
           >
             <TbWorld className="globeIcon" />
             <span className="selectedLanguage">
-              {i18n.language.toUpperCase()}
+              {(lang || i18n.language).toUpperCase()}
             </span>
             <div className={`dropdownContent ${isDropdownOpen ? "open" : ""}`}>
               <button

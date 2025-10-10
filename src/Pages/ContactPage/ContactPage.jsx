@@ -60,7 +60,7 @@ const ContactPage = () => {
                     <PiClockClockwiseBold />
                   </div>
                   <div className="contactText">
-                    <p>{t("contact.hours")}</p>
+                    <p>9:00 - 03:00</p>
                   </div>
                 </div>
                 <div className="contactItem">

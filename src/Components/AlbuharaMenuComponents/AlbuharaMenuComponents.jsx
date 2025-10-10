@@ -5,7 +5,7 @@ import ZapFast from "../../../public/assets/zap-fast.png";
 import MenuBoard from "../../../public/assets/menu-board.png";
 import { FiMap } from "react-icons/fi";
 import { Link } from "react-router-dom";
-import { MdOutlinePermContactCalendar } from "react-icons/md";
+import { LuPhoneCall } from "react-icons/lu";
 import { useTranslation } from "react-i18next";
 
 const AlbuharaMenuComponents = () => {
@@ -36,15 +36,23 @@ const AlbuharaMenuComponents = () => {
       >
         <img src={decorSquare} alt="Circle 3" />
         <div className="AlbuharaMenuComponentsText">
-          <FiMap />
+          <i>
+            <FiMap />
+          </i>
           {t("albuhara.address")}
         </div>
       </Link>
 
-      <Link to="tel:+994555254193" className="AlbuharaMenuComponentsCircleItem" target="_blank">
+      <Link
+        to="tel:+994555254193"
+        className="AlbuharaMenuComponentsCircleItem"
+        target="_blank"
+      >
         <img src={decorSquare} alt="Circle 4" />
         <div className="AlbuharaMenuComponentsText">
-          <MdOutlinePermContactCalendar />
+          <i>
+            <LuPhoneCall />
+          </i>
           {t("albuhara.contact")}
         </div>
       </Link>

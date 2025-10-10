@@ -12,7 +12,6 @@ import AdminLayout from './Admin/AdminLayout';
 import AdminCategories from './Admin/AdminCategories/AdminCategories';
 import AdminDashboard from './Admin/AdminDashboard/AdminDashboard';
 import AdminProductsContainer from './Admin/AdminProduct/AdminProduct';
-import './App.css';
 import MenuComponent from './Components/MenuComponent/MenuComponent';
 import AboutPage from './Pages/AboutPage/AboutPage';
 import AdminHome from './Admin/AdminHome/AdminHome';
@@ -20,6 +19,7 @@ import AdminAbout from './Admin/AdminAbout/AdminAbout';
 import AdminContact from './Admin/AdminContact/AdminContact';
 import AdminDecor from './Admin/AdminDecor/AdminDecor';
 import ErrorPage from './Pages/ErrorPage/ErrorPage';
+import './App.css';
 
 // ScrollToTop component with smooth scrolling
 const ScrollToTop = () => {
@@ -44,9 +44,12 @@ function App() {
       <Router>
         <ScrollToTop />
         <Routes>
-          {/* Public routes under MainLayout with header, footer, and NotMean */}
+          {/* Redirect root to default language (Azerbaijani) */}
+          <Route path="/" element={<Navigate to="/az" replace />} />
+          
+          {/* Language-prefixed public routes */}
           <Route
-            path="/"
+            path="/:lang"
             element={
               <>
                 <NotMean />
@@ -55,14 +58,16 @@ function App() {
             }
           >
             <Route index element={<HomePage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/menu" element={<MenuComponent />} />
-            <Route path="/delivery" element={<DeliveryPage />} />
-            <Route path="/about" element={<AboutPage />} />
+            <Route path="contact" element={<ContactPage />} />
+            <Route path="menu" element={<MenuComponent />} />
+            <Route path="delivery" element={<DeliveryPage />} />
+            <Route path="about" element={<AboutPage />} />
           </Route>
-          {/* Login route, accessible to all */}
+
+          {/* Login route, accessible to all (no language prefix) */}
           <Route path="/login" element={<Login />} />
-          {/* Admin routes, protected by ProtectedRoute */}
+
+          {/* Admin routes, protected by ProtectedRoute (no language prefix) */}
           <Route
             path="/admin"
             element={
@@ -79,7 +84,9 @@ function App() {
             <Route path="admin-contact" element={<AdminContact />} />
             <Route path="admin-decor" element={<AdminDecor />} />
           </Route>
-           <Route path="*" element={<ErrorPage />} />
+
+          {/* 404 Error page */}
+          <Route path="*" element={<ErrorPage />} />
         </Routes>
       </Router>
     </I18nextProvider>
