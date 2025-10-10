@@ -44,7 +44,7 @@ const AlbuharaMenuComponents = () => {
       </Link>
 
       <Link
-        to="tel:+994555254193"
+        to="tel:+994506501010"
         className="AlbuharaMenuComponentsCircleItem"
         target="_blank"
       >
