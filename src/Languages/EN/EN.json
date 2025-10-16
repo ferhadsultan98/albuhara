@@ -3,7 +3,9 @@
     "home": "Home",
     "about": "About",
     "menu": "Menu",
-    "contact": "Contact"
+    "contact": "Contact",
+        "book": "Book"
+
   },
   "about": {
     "title": "About Us",

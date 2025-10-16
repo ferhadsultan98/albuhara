@@ -51,7 +51,7 @@ const AlbuharaMenuComponents = () => {
 
 
       <Link
-        to="tel:+994555254193"
+        to="tel:+994506501010"
         className="AlbuharaMenuComponentsCircleItem"
       >
         <img src={decorSquare} alt="Circle 4" />
