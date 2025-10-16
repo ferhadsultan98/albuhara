@@ -32,7 +32,9 @@ const ContactPage = () => {
             <div className="contactInfo">
               <div className="contactHeader">
                 <h2 className="contactTitle">{t("contact.title")}</h2>
-                <p className={`contactSubtitle ${platform}`}>{t("contact.subtitle")}</p>
+                <p className={`contactSubtitle ${platform}`}>
+                  {t("contact.subtitle")}
+                </p>
               </div>
               <div className="contactDetails">
                 <div className="contactItem">
@@ -40,8 +42,9 @@ const ContactPage = () => {
                     <FiPhoneCall />
                   </div>
                   <div className="contactText">
-                    <a href="tel:+994506501010" target="_blank">+99450 650 10 10</a>
-                    
+                    <a href="tel:+994506501010" target="_blank">
+                      +99450 650 10 10
+                    </a>
                   </div>
                 </div>
 
@@ -50,8 +53,9 @@ const ContactPage = () => {
                     <FiMail />
                   </div>
                   <div className="contactText">
-                    <a href="mailto:info@albuhara.az" target="_blank">info@albuhara.az</a>
-                   
+                    <a href="mailto:info@albuhara.az" target="_blank">
+                      info@albuhara.az
+                    </a>
                   </div>
                 </div>
 
@@ -68,8 +72,12 @@ const ContactPage = () => {
                     <FiMapPin />
                   </div>
                   <div className="contactText">
-                    <a href="https://maps.app.goo.gl/eoB3GGrkonkctRpa7" target="_blank">{t("contact.address")}</a>
-                 
+                    <a
+                      href="https://maps.app.goo.gl/eoB3GGrkonkctRpa7"
+                      target="_blank"
+                    >
+                      {t("contact.address")}
+                    </a>
                   </div>
                 </div>
               </div>
@@ -89,7 +97,7 @@ const ContactPage = () => {
         </div>
       </section>
       {isVisible && <ButaComponent />}
-      <div style={{marginBottom: "80px"}}></div>
+      <div style={{ marginBottom: "80px" }}></div>
     </>
   );
 };
