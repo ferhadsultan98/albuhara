@@ -111,7 +111,7 @@ const ResponsiveMenuPage = () => {
                   </p>
                 )}
                 <div className="ResponsiveMenuPageMenuCardPrice">
-                  {item.base_price}₼
+                  {item.base_price}AZN
                 </div>
               </>
             ) : (
@@ -127,7 +127,7 @@ const ResponsiveMenuPage = () => {
                       }
                     </span>
                     <span className="ResponsiveMenuPageSizePrice">
-                      {variant.price}₼
+                      {variant.price}AZN
                     </span>
                   </div>
                 ))}
