@@ -101,12 +101,12 @@
 
         .dropdownContent {
           position: absolute;
-          top: 100%; // Position directly below the language button
+          top: 110%; // Position directly below the language button
           left: 0; // Align with the left edge of languageDropdown
           background-color: #faefdf;
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
           border-radius: 4px;
-          min-width: 50px;
+          min-width: 60px;
           opacity: 0;
           transform: translateY(-10px);
           visibility: hidden;
@@ -197,13 +197,13 @@
           }
 
           .dropdownContent {
-            min-width: 45px;
+            min-width: 50px;
             left: 0; // Ensure alignment under language button
-            top: 100%; // Position directly below
+            top: 110%; // Position directly below
 
             button {
               padding: 0.3rem 0.7rem;
-              font-size: 0.8rem;
+              font-size: 0.9rem;
             }
           }
         }
@@ -257,13 +257,13 @@
           }
 
           .dropdownContent {
-            min-width: 40px;
+            min-width: 50px;
             left: 0; // Ensure alignment under language button
-            top: 100%; // Position directly below
+            top: 110%; // Position directly below
 
             button {
               padding: 0.3rem 0.6rem;
-              font-size: 0.7rem;
+              font-size: 0.9rem;
             }
           }
         }
