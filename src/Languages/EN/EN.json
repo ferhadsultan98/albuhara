@@ -27,6 +27,10 @@
     "subtitle": "Welcome to Albuhara",
     "address": "Asiq Molla Cümə 44B, Baku, Azerbaijan AZ 1969"
   },
+  "delivery": {
+    "title": "fast & reliable delivery",
+    "description": "Your order will be delivered right to your doorstep in no time. Enjoy a smooth and secure delivery experience with us."
+  },
   "menu": {
     "noItems": "no information found",
     "header": "Menu",

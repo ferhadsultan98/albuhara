@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 const ContactPage = () => {
   const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
-  const platform = usePlatform(); // 🔹 iOS, Android və ya other
+  const platform = usePlatform();
 
   const handleResize = useCallback(() => {
     setIsVisible(window.innerWidth < 744);
@@ -19,7 +19,7 @@ const ContactPage = () => {
 
   useEffect(() => {
     window.addEventListener("resize", handleResize);
-    handleResize(); // Initial check
+    handleResize();
 
     return () => window.removeEventListener("resize", handleResize);
   }, [handleResize]);
@@ -42,7 +42,7 @@ const ContactPage = () => {
                     <FiPhoneCall />
                   </div>
                   <div className="contactText">
-                    <a href="tel:+994506501010" target="_blank">
+                    <a href="tel:+994506501010" target="_blank" className={platform}>
                       +99450 650 10 10
                     </a>
                   </div>
@@ -53,7 +53,7 @@ const ContactPage = () => {
                     <FiMail />
                   </div>
                   <div className="contactText">
-                    <a href="mailto:info@albuhara.az" target="_blank">
+                    <a href="mailto:info@albuhara.az" target="_blank" className={platform}>
                       info@albuhara.az
                     </a>
                   </div>
@@ -64,7 +64,7 @@ const ContactPage = () => {
                     <PiClockClockwiseBold />
                   </div>
                   <div className="contactText">
-                    <p>9:00 - 03:00</p>
+                    <p className={platform}>9:00 - 03:00</p>
                   </div>
                 </div>
                 <div className="contactItem">
@@ -75,6 +75,7 @@ const ContactPage = () => {
                     <a
                       href="https://maps.app.goo.gl/eoB3GGrkonkctRpa7"
                       target="_blank"
+                      className={platform}
                     >
                       {t("contact.address")}
                     </a>

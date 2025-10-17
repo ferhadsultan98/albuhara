@@ -291,7 +291,7 @@
         .ResponsiveMenuPageMenuCardBadges {
           position: absolute;
           bottom: 6px;
-          right: 6px;
+          right: 12px;
           display: flex;
           align-items: center;
           gap: 4px;
@@ -313,11 +313,13 @@
             &.ResponsiveMenuPageBadgeVegan {
               background: #f7e7d0cc;
               color: #39aa04;
+              border-radius: 8px;
             }
 
             &.ResponsiveMenuPageBadgeNew {
               background: #f7e7d0cc;
               color: #aa041c;
+               border-radius: 8px;
             }
           }
         }

@@ -53,7 +53,7 @@ const AlbuharaMenuComponents = () => {
         </div>
       </Link>
 
-      <Link to="tel:+994506501010" className="AlbuharaMenuComponentsCircleItem">
+      <a href="tel:+994506501010" className="AlbuharaMenuComponentsCircleItem">
         <img src={decorSquare} alt="Circle 4" />
         <div className="AlbuharaMenuComponentsText">
           <i>
@@ -61,7 +61,7 @@ const AlbuharaMenuComponents = () => {
           </i>
           <span>{t("albuhara.contact")}</span>
         </div>
-      </Link>
+      </a>
     </div>
   );
 };

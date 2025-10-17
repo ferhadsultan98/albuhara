@@ -4,17 +4,15 @@ import BoltLogo from "../../../public/assets/delivery/bolt.png";
 import YangoLogo from "../../../public/assets/delivery/yango.png";
 import WoltLogo from "../../../public/assets/delivery/wolt.png";
 import usePlatform from "../../Hooks/usePlatform";
+import { useTranslation } from "react-i18next";
 
 function DeliveryPage() {
   const platform = usePlatform(); // 🔹 iOS, Android və ya other
-
+  const { t, i18n } = useTranslation();
   return (
     <div className="deliveryContainer">
-      <h2 className={`title ${platform}`}>Fast & Reliable Delivery</h2>
-      <p className="deliveryDescription">
-        Your order will be delivered right to your doorstep in no time. Enjoy a
-        smooth and secure delivery experience with us.
-      </p>
+      <h2 className={`title ${platform}`}>{t("delivery.title")}</h2>
+      <p className="deliveryDescription">{t("delivery.description")}</p>
       <div className="deliveryOptions">
         <div className="logoCard">
           <a href="[example-url]" target="_blank" rel="noopener noreferrer">

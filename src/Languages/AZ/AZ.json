@@ -22,9 +22,13 @@
     "description": "Sizi rahatlıq və zövqlə dizayn edilmiş bir məkana dəvət edirik. Müasir və rahat atmosfer istirahətiniz üçün ideal şərait yaradır. Hər künc diqqətlə düzülüb, hər detal isə özünüzü evdəki kimi hiss etməyiniz üçün seçilib."
   },
   "contact": {
-    "title": "ƏLAQƏ",
+    "title": "Əlaqə",
     "subtitle": "Albuhara-ya xoş gəlmisiniz",
     "address": "Aşıq Molla Cümə 44B, Bakı, Azərbaycan AZ 1969"
+  },
+  "delivery": {
+    "title": "sürətli və etibarlı çatdırılma",
+    "description": "Sifarişiniz qısa zamanda qapınıza çatdırılacaq. Bizimlə rahat və təhlükəsiz çatdırılma təcrübəsindən həzz alın."
   },
   "menu": {
     "noItems": "üzrə məlumat tapılmadı",
