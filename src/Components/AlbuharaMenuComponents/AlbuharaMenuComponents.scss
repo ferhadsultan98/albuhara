@@ -1,4 +1,5 @@
 @import "../../Styles/fonts.scss";
+
 .AlbuharaMenuComponentsContainer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -25,11 +26,13 @@
       height: 100%;
       object-fit: contain;
     }
+
     svg {
       width: 60%;
       height: 60%;
       object-fit: contain;
     }
+
     .AlbuharaMenuComponentsText {
       position: absolute;
       top: 50%;
@@ -44,10 +47,22 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 20px;
-      i{
-        font-size: 3.5rem;
+      gap: 10px;
+
+      i {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 56px;
+        height: 56px;
+        
+      
       }
+
+      span {
+        display: block;
+      }
+
       .AlbuharaMenuIcon {
         max-width: 35px;
       }
@@ -58,8 +73,8 @@
     grid-template-columns: 1fr 1fr;
     gap: 15px;
     padding: 15px;
-    justify-content: center; /* Yatayda merkeze hizala */
-    align-content: center; /* Dikeyde merkeze hizala */
+    justify-content: center;
+    align-content: center;
 
     .AlbuharaMenuComponentsCircleItem {
       width: 200px;
@@ -71,23 +86,31 @@
     grid-template-columns: 1fr 1fr;
     gap: 10px;
     padding: 10px;
-    justify-content: center; /* Yatayda merkeze hizala */
-    align-content: center; /* Dikeyde merkeze hizala */
+    justify-content: center;
+    align-content: center;
 
     .AlbuharaMenuComponentsCircleItem {
       width: 140px;
       height: 140px;
-      margin: 0 auto; /* Ekstra yatay merkezleme için */
-    }
+      margin: 0 auto;
 
-    .AlbuharaMenuComponentsText {
-      font-size: 15px !important;
-      gap: 10px !important;
-      .AlbuharaMenuIcon {
-        max-width: 25px !important;
-      }
-       i{
-        font-size: 40px;
+      .AlbuharaMenuComponentsText {
+        font-size: 15px !important;
+        gap: 8px !important;
+
+        i {
+          width: 30px !important;
+          height: 30px !important;
+
+          svg {
+            width: 30px !important;
+            height: 30px !important;
+          }
+        }
+
+        .AlbuharaMenuIcon {
+          max-width: 25px !important;
+        }
       }
     }
   }
