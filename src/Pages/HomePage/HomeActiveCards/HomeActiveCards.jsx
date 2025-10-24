@@ -63,7 +63,7 @@ const HomeActiveCards = () => {
                     <span className="size">
                       {variant.size[i18n.language.charAt(0).toUpperCase() + i18n.language.slice(1)]}
                     </span>
-                    <span className="price">{variant.price}</span>
+                    <span className="price">{variant.price}AZN</span>
                   </div>
                 ))}
               </div>
