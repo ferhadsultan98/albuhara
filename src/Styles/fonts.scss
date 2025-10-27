@@ -1,6 +1,7 @@
 @font-face {
   font-family: "Copperplate";
-  src: url("../../public/assets/fonts/Copperplate.otf") format("opentype");
+  src: url("../../public/assets/fonts/Copperplate-Bold.woff2") format("woff2"),
+       url("../../public/assets/fonts/Copperplate-Bold.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
