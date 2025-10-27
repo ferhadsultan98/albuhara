@@ -3,7 +3,7 @@
     "home": "Ana Səhifə",
     "about": "Haqqımızda",
     "menu": "Menyu",
-    "contact": "ƏLAQƏ",
+    "contact": "Əlaqə",
     "book": "Sifariş et"
   },
   "about": {
@@ -50,7 +50,7 @@
     "about": "Haqqımızda",
     "home": "Əsas səhifə",
     "menu": "Menyu",
-    "contact": "ƏLAQƏ",
+    "contact": "Əlaqə",
     "terms": "Şərtlər",
     "privacy": "Məxfilik",
     "cookies": "Çərəzlər",
@@ -63,9 +63,9 @@
     "backButton": "Geri Qayıt"
   },
   "albuhara": {
-    "delivery": "Çatdırılma",
-    "menu": "Menyu",
-    "address": "Ünvan",
+    "delivery": "ÇATDIRILMA",
+    "menu": "MENYU",
+    "address": "ÜNVAN",
     "contact": "ƏLAQƏ"
   }
 }
