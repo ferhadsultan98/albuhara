@@ -105,18 +105,16 @@
   }
 
   .ResponsiveMenuPageMenuGrid {
-    display: grid;
-    grid-template-columns: repeat(3, 327px);
+    display: flex;
+    flex-wrap: wrap;
     gap: 16px;
-
-    @media (max-width: 1050px) {
-      grid-template-columns: repeat(2, 327px);
-    }
+    justify-content: center;
 
     @media (max-width: 700px) {
-      grid-template-columns: 327px;
       gap: 12px;
     }
+
+  
   }
 
   .ResponsiveMenuPageMenuCard {
@@ -128,6 +126,18 @@
     width: 327px;
     height: 194px;
     padding: 10px;
+    flex-shrink: 0;
+
+    @media (max-width: 1050px) {
+      width: calc(50% - 8px);
+      max-width: 327px;
+    }
+
+    @media (max-width: 700px) {
+      width: 100%;
+      max-width: 327px;
+      margin: 0 auto;
+    }
 
     &:hover {
       transform: translateY(-2px);
@@ -173,7 +183,7 @@
         }
 
         .ResponsiveMenuPageMenuCardPrice {
-          font-size: 16px;
+          font-size: 14px;
           color: #2c1810;
           margin-top: 8px;
           display: flex;
@@ -208,13 +218,15 @@
             padding: 2px 0;
 
             .ResponsiveMenuPageSizeLabel {
-              font-weight: 600;
+              font-weight: 500;
               color: #2c1810;
+              font-size: 12px;
             }
 
             .ResponsiveMenuPageSizePrice {
-              font-weight: 700;
+              font-weight: 500;
               color: #2c1810;
+              font-size: 12px;
             }
           }
         }

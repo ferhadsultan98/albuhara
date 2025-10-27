@@ -210,7 +210,7 @@ const ResponsiveMenuPage = () => {
         // Render items
         groupedItems.map((group, groupIndex) => (
           <div key={groupIndex} className="ResponsiveMenuPageCategorySection">
-            {group.category && (
+            {/* {group.category && (
               <h2 className="ResponsiveMenuPageCategoryTitle">
                 {
                   group.category.title[
@@ -219,7 +219,7 @@ const ResponsiveMenuPage = () => {
                   ]
                 }
               </h2>
-            )}
+            )} */}
             <div className="ResponsiveMenuPageMenuGrid">
               {group.items.map((item, index) => renderMenuItem(item, index))}
             </div>
