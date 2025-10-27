@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Spin as HamburgerSpin } from "hamburger-react";
 import { TbWorld } from "react-icons/tb";
 import "./Header.scss";
-import HorizontalLogo from "../../../public/assets/darkhorizontalalbuhara.png";
+import HorizontalLogo from "../../../public/assets/albuharalogo.svg";
 import { Link, useNavigate, useParams, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 

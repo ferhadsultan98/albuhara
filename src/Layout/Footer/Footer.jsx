@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.scss";
-import HorizontalLogo from "../../../public/assets/darkhorizontalalbuhara.png";
+import HorizontalLogo from "../../../public/assets/albuharalogo.svg";
 import { FaTiktok, FaInstagram, FaFacebook } from "react-icons/fa";
 import { Link, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";

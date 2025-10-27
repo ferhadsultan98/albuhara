@@ -1,13 +1,8 @@
 import React from "react";
 import "./AlbuharaMenuComponents.scss";
 import decorSquare from "../../assets/menuIcon/borderIcon.svg";
-import ZapFast from "../../../public/assets/zap-fast.png";
-import MenuBoard from "../../../public/assets/menu-board.png";
-import { FiMap } from "react-icons/fi";
 import { Link, useParams } from "react-router-dom";
-import { LuPhoneCall } from "react-icons/lu";
 import { useTranslation } from "react-i18next";
-import { Truck, Utensils } from "lucide-react";
 import deliveryIcon from '../../assets/menuIcon/deliveryIcon.svg'
 import menuIcon from '../../assets/menuIcon/menuIcon.svg'
 import addressIcon from '../../assets/menuIcon/addressIcon.svg'
