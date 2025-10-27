@@ -13,7 +13,7 @@
 
   .AlbuharaMenuComponentsCircleItem {
     position: relative;
-    width: 216px;
+    width: 217px;
     height: 182px;
     display: flex;
     justify-content: center;
@@ -27,11 +27,11 @@
       object-fit: contain;
     }
 
-    svg {
-      width: 60%;
-      height: 60%;
-      object-fit: contain;
-    }
+    // svg {
+    //   width: 60%;
+    //   height: 60%;
+    //   object-fit: contain;
+    // }
 
     .AlbuharaMenuComponentsText {
       position: absolute;
@@ -47,16 +47,14 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
 
-      i {
+      img {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 56px;
-        height: 56px;
-        
-      
+        width: 32px;
+        height: 32px;
       }
 
       span {
@@ -96,16 +94,11 @@
 
       .AlbuharaMenuComponentsText {
         font-size: 15px !important;
-        gap: 15px !important;
+        gap: 8px !important;
 
-        i {
-          width: 30px !important;
-          height: 30px !important;
-
-          svg {
-            width: 30px !important;
-            height: 30px !important;
-          }
+        img {
+          width: 20px !important;
+          height: 20px !important;
         }
 
         .AlbuharaMenuIcon {

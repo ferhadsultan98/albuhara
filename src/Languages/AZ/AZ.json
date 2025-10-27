@@ -3,7 +3,7 @@
     "home": "Ana Səhifə",
     "about": "Haqqımızda",
     "menu": "Menyu",
-    "contact": "Əlaqə",
+    "contact": "ƏLAQƏ",
     "book": "Sifariş et"
   },
   "about": {
@@ -22,7 +22,7 @@
     "description": "Sizi rahatlıq və zövqlə dizayn edilmiş bir məkana dəvət edirik. Müasir və rahat atmosfer istirahətiniz üçün ideal şərait yaradır. Hər künc diqqətlə düzülüb, hər detal isə özünüzü evdəki kimi hiss etməyiniz üçün seçilib."
   },
   "contact": {
-    "title": "Əlaqə",
+    "title": "ƏLAQƏ",
     "subtitle": "Albuhara-ya xoş gəlmisiniz",
     "address": "Aşıq Molla Cümə 44B, Bakı, Azərbaycan AZ 1969"
   },
@@ -50,7 +50,7 @@
     "about": "Haqqımızda",
     "home": "Əsas səhifə",
     "menu": "Menyu",
-    "contact": "Əlaqə",
+    "contact": "ƏLAQƏ",
     "terms": "Şərtlər",
     "privacy": "Məxfilik",
     "cookies": "Çərəzlər",
@@ -66,6 +66,6 @@
     "delivery": "Çatdırılma",
     "menu": "Menyu",
     "address": "Ünvan",
-    "contact": "Əlaqə"
+    "contact": "ƏLAQƏ"
   }
 }

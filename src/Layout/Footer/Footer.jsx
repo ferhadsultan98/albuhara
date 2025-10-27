@@ -2,13 +2,14 @@ import React from "react";
 import "./Footer.scss";
 import HorizontalLogo from "../../../public/assets/darkhorizontalalbuhara.png";
 import { FaTiktok, FaInstagram, FaFacebook } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { FaSnapchat } from "react-icons/fa";
 import { FaTripadvisor } from "react-icons/fa";
 
 const Footer = () => {
   const { t } = useTranslation();
+  const { lang } = useParams();
 
   return (
     <footer className="footer">
@@ -66,10 +67,10 @@ const Footer = () => {
         </div>
 
         <div className="footerNav">
-          <a href="/">{t("footer.home")}</a>
-          <a href="/about">{t("footer.about")}</a>
-          <a href="/menu">{t("footer.menu")}</a>
-          <a href="/contact">{t("footer.contact")}</a>
+          <Link to={`/${lang}/`}>{t("footer.home")}</Link>
+          <Link to={`/${lang}/about`}>{t("footer.about")}</Link>
+          <Link to={`/${lang}/menu`}>{t("footer.menu")}</Link>
+          <Link to={`/${lang}/contact`}>{t("footer.contact")}</Link>
         </div>
       </div>
 
