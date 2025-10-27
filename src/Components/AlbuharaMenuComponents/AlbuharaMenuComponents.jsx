@@ -9,9 +9,6 @@ import addressIcon from '../../assets/menuIcon/addressIcon.svg'
 import contactyIcon from '../../assets/menuIcon/contactIcon.svg'
 
 
-
-
-
 const AlbuharaMenuComponents = () => {
   const { t } = useTranslation();
   const { lang } = useParams();
