@@ -12,10 +12,10 @@
     font-family: "Copperplate", serif; // default (iOS + web + desktop)
     text-transform: uppercase;
 
-    &.android {
-      font-family: "ArticulatCF", sans-serif; // yalnız Android
-      font-weight: 400;
-    }
+    // &.android {
+    //   font-family: "ArticulatCF", sans-serif; // yalnız Android
+    //   font-weight: 400;
+    // }
     @media (max-width: 768px) {
       font-size: 1.3rem;
     }

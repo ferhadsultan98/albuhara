@@ -66,10 +66,10 @@
           color: #f7e7d0;
           font-family: "Copperplate", serif;
 
-          &.android {
-            font-family: "ArticulatCF", sans-serif;
-            font-weight: 400;
-          }
+          // &.android {
+          //   font-family: "ArticulatCF", sans-serif;
+          //   font-weight: 400;
+          // }
 
           @media (max-width: 480px) {
             margin-bottom: 2rem;
@@ -154,10 +154,10 @@
                 text-decoration: none;
                 transition: 0.5s;
 
-                &.android {
-                  font-family: "ArticulatCF", sans-serif;
-                  font-weight: 400;
-                }
+                // &.android {
+                //   font-family: "ArticulatCF", sans-serif;
+                //   font-weight: 400;
+                // }
 
                 @media (max-width: 480px) {
                   font-family: "Copperplate", serif;
