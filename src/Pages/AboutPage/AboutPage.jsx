@@ -9,7 +9,7 @@ import usePlatform from "../../Hooks/usePlatform";
 
 const AboutPage = () => {
   const { t } = useTranslation();
-  const platform = usePlatform(); // 🔹 iOS, Android və ya other
+  const platform = usePlatform(); 
 
   return (
     <div className="aboutContainer">
