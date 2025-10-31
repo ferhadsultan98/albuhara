@@ -29,7 +29,7 @@ const HomeActiveCards = () => {
         <div className="activeCardItem" key={item.id}>
           <div className="imageWrapper">
             <img
-              src={item.image || "/assets/test1.png"}
+              src={item.image || "/assets/noImage.png"}
               alt={item.name[i18n.language.charAt(0).toUpperCase() + i18n.language.slice(1)]}
             />
             {item.is_vegan && (

@@ -136,7 +136,7 @@ const ResponsiveMenuPage = () => {
           </div>
           <div className="ResponsiveMenuPageMenuCardImageContainer">
             <img
-              src={item.image || "/assets/test1.png"}
+              src={item.image || "/assets/noImage.png"}
               alt={
                 item.name[
                   i18n.language.charAt(0).toUpperCase() + i18n.language.slice(1)
