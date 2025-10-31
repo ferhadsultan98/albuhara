@@ -105,7 +105,7 @@ const DesktopMenuPage = () => {
                   <div className="categoryItem" key={item.id}>
                     <div className="imageWrapper">
                       <img
-                        src={item.image || "/assets/test1.png"}
+                        src={item.image || "/assets/noImage.png"}
                         alt={
                           item.name[
                             i18n.language.charAt(0).toUpperCase() +
@@ -205,7 +205,7 @@ const DesktopMenuPage = () => {
                   <div className="categoryItem" key={item.id}>
                     <div className="imageWrapper">
                       <img
-                        src={item.image || "/assets/test1.png"}
+                        src={item.image || "/assets/noImage.png"}
                         alt={
                           item.name[
                             i18n.language.charAt(0).toUpperCase() +
